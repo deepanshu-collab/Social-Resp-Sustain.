@@ -1,6 +1,14 @@
+import { motion } from "framer-motion";
+
 const FooterCTA = () => {
   return (
-    <section className="bg-primary py-16 px-6 md:px-12">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className="bg-primary py-16 px-6 md:px-12"
+    >
       <div className="max-w-7xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-display text-primary-foreground font-semibold mb-8">
           Ready to Begin Your Journey?
@@ -20,7 +28,7 @@ const FooterCTA = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

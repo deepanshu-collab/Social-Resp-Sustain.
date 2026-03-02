@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import campusGoa from "@/assets/campus-goa.webp";
 import campusDubai from "@/assets/campus-dubai.jpg";
 import campusPilani from "@/assets/campus-pilani.webp";
@@ -155,7 +156,13 @@ const CampusTabs = () => {
   const data = campusContent[active];
 
   return (
-    <section className="py-16 px-6 md:px-12 bg-lavender">
+    <motion.section
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.6 }}
+      className="py-16 px-6 md:px-12 bg-lavender"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-display text-foreground font-semibold mb-8 text-center">
           Sustainability Initiatives Across Campuses
@@ -177,42 +184,53 @@ const CampusTabs = () => {
           ))}
         </div>
 
-        <div className="bg-card rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src={campusImages[active]}
-            alt={data.title}
-            className="w-full h-64 md:h-80 object-cover"
-            loading="lazy"
-          />
-          <div className="p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-4">
-              {data.title}
-            </h3>
-            <p className="text-muted-foreground font-body leading-relaxed mb-8">
-              {data.intro}
-            </p>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {data.sections.map((section) => (
-                <div key={section.heading}>
-                  <h4 className="text-lg font-display text-foreground font-semibold mb-3 border-b border-border pb-2">
-                    {section.heading}
-                  </h4>
-                  <ul className="space-y-2">
-                    {section.items.map((item, i) => (
-                      <li key={i} className="text-sm font-body text-muted-foreground leading-relaxed flex gap-2">
-                        <span className="text-green-accent mt-1 flex-shrink-0">•</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={active}
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -15 }}
+            transition={{ duration: 0.35 }}
+            className="bg-card rounded-2xl overflow-hidden shadow-lg"
+          >
+            <div className="w-full h-64 md:h-80 overflow-hidden bg-muted flex items-center justify-center">
+              <img
+                src={campusImages[active]}
+                alt={data.title}
+                className="w-full h-full object-contain"
+                loading="lazy"
+              />
             </div>
-          </div>
-        </div>
+            <div className="p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-4">
+                {data.title}
+              </h3>
+              <p className="text-muted-foreground font-body leading-relaxed mb-8">
+                {data.intro}
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8">
+                {data.sections.map((section) => (
+                  <div key={section.heading}>
+                    <h4 className="text-lg font-display text-foreground font-semibold mb-3 border-b border-border pb-2">
+                      {section.heading}
+                    </h4>
+                    <ul className="space-y-2">
+                      {section.items.map((item, i) => (
+                        <li key={i} className="text-sm font-body text-muted-foreground leading-relaxed flex gap-2">
+                          <span className="text-green-accent mt-1 flex-shrink-0">•</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

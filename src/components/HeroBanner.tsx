@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import heroImage from "@/assets/hero-sustainability-new.jpg";
 
 const HeroBanner = () => {
@@ -6,7 +7,7 @@ const HeroBanner = () => {
       <img
         src={heroImage}
         alt="Sustainability - hand holding green ecosystem"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
       <div
         className="absolute inset-0"
@@ -15,9 +16,14 @@ const HeroBanner = () => {
         }}
       />
       <div className="relative z-10 flex items-end h-full px-6 md:px-12 pb-16">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground font-medium tracking-wide">
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground font-medium tracking-wide"
+        >
           Sustainability
-        </h2>
+        </motion.h2>
       </div>
     </section>
   );

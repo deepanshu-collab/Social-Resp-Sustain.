@@ -1,19 +1,13 @@
-import { FileText, Globe, Leaf, Shield, BookOpen, Users, BarChart3, Award, ClipboardList } from "lucide-react";
+import { motion } from "framer-motion";
 import sdgImage from "@/assets/sdg-goals.webp";
 
 const principles = [
-  { label: "Climate Action Plan", icon: Leaf },
-  { label: "SDG Impact", icon: Globe },
-  { label: "Sustainable Investment Policy", icon: BarChart3 },
-  { label: "HESI Community Member", icon: Users },
-  { label: "Sustainable Procurement Policy", icon: Shield },
-  { label: "Race to Zero", icon: Award },
-  { label: "Green Audit Report", icon: FileText },
-  { label: "Anti-Bribery & Anti-Corruption Policy", icon: Shield },
-  { label: "Code of Ethics", icon: BookOpen },
-  { label: "Student Club", icon: Users },
-  { label: "Minutes", icon: ClipboardList },
-  { label: "Carbon Reduction Strategic Plan", icon: Leaf },
+  ["Climate Action Plan", "SDG Impact"],
+  ["Sustainable Investment Policy", "HESI Community Member"],
+  ["Sustainable Procurement Policy", "Race to Zero"],
+  ["Green Audit Report", "Anti-Bribery & Anti-Corruption Policy"],
+  ["Code of Ethics", "Student Club"],
+  ["Minutes", "Carbon Reduction Strategic Plan"],
 ];
 
 const GuidingPrinciples = () => {
@@ -21,7 +15,12 @@ const GuidingPrinciples = () => {
     <section className="py-16 px-6 md:px-12 bg-card">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
             <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-4">
               A Campus That Breathes Sustainability
             </h3>
@@ -33,26 +32,40 @@ const GuidingPrinciples = () => {
                 loading="lazy"
               />
             </div>
-          </div>
-          <div>
-            <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-6">
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <h3 className="text-2xl md:text-3xl font-display text-primary font-semibold mb-8 text-center">
               Guiding Principles for a Sustainable Campus & Community
             </h3>
-            <div className="bg-lavender rounded-xl p-4 space-y-1">
-              {principles.map(({ label, icon: Icon }) => (
-                <a
-                  key={label}
-                  href="#"
-                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-card hover:bg-lavender-deep border border-border transition-colors group"
-                >
-                  <Icon className="w-5 h-5 text-accent flex-shrink-0" />
-                  <span className="font-body text-sm font-semibold text-accent group-hover:underline">
-                    {label}
-                  </span>
-                </a>
+            <div className="space-y-4">
+              {principles.map(([left, right], idx) => (
+                <div key={idx} className="grid grid-cols-2 gap-4">
+                  <a
+                    href="#"
+                    className="block px-5 py-4 border-2 border-primary/20 rounded hover:border-primary hover:bg-lavender transition-colors group"
+                  >
+                    <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary">
+                      {left}
+                    </span>
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-5 py-4 border-2 border-primary/20 rounded hover:border-primary hover:bg-lavender transition-colors group"
+                  >
+                    <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary">
+                      {right}
+                    </span>
+                  </a>
+                </div>
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
