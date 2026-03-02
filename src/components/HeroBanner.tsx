@@ -2,6 +2,49 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import heroImage from "@/assets/hero-sustainability-new.jpg";
 
+const butterflyPaths = [
+  { startX: "10%", startY: "60%", endX: "85%", endY: "15%", duration: 12, delay: 0, size: 18 },
+  { startX: "90%", startY: "70%", endX: "20%", endY: "20%", duration: 15, delay: 1.5, size: 14 },
+  { startX: "30%", startY: "80%", endX: "70%", endY: "10%", duration: 10, delay: 0.8, size: 20 },
+  { startX: "60%", startY: "75%", endX: "15%", endY: "25%", duration: 14, delay: 2.5, size: 16 },
+  { startX: "50%", startY: "65%", endX: "90%", endY: "30%", duration: 11, delay: 3, size: 12 },
+  { startX: "75%", startY: "85%", endX: "40%", endY: "5%", duration: 13, delay: 1, size: 15 },
+];
+
+const Butterfly = ({ startX, startY, endX, endY, duration, delay, size }: typeof butterflyPaths[0]) => (
+  <motion.div
+    className="absolute z-10 pointer-events-none"
+    style={{ left: startX, top: startY }}
+    animate={{
+      left: [startX, `${parseFloat(endX) * 0.5}%`, endX, startX],
+      top: [startY, `${parseFloat(endY) + 20}%`, endY, startY],
+    }}
+    transition={{ duration, delay, repeat: Infinity, ease: "easeInOut" }}
+  >
+    <motion.svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      animate={{ rotate: [0, 10, -10, 5, 0], scaleY: [1, 0.6, 1, 0.5, 1] }}
+      transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+    >
+      {/* Left wing */}
+      <motion.path
+        d="M12 12C10 8 4 4 2 8C0 12 6 14 12 12Z"
+        fill="hsla(0, 0%, 100%, 0.7)"
+      />
+      {/* Right wing */}
+      <motion.path
+        d="M12 12C14 8 20 4 22 8C24 12 18 14 12 12Z"
+        fill="hsla(0, 0%, 100%, 0.6)"
+      />
+      {/* Body */}
+      <line x1="12" y1="6" x2="12" y2="18" stroke="hsla(0, 0%, 100%, 0.8)" strokeWidth="0.8" />
+    </motion.svg>
+  </motion.div>
+);
+
 const HeroBanner = () => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
@@ -26,20 +69,18 @@ const HeroBanner = () => {
           background: "linear-gradient(180deg, hsla(234,40%,25%,0.3) 0%, hsla(234,50%,15%,0.7) 100%)"
         }}
       />
+
+      {/* Flying butterflies */}
+      {butterflyPaths.map((b, i) => (
+        <Butterfly key={i} {...b} />
+      ))}
+
       <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="inline-block px-4 py-1.5 bg-green-accent/20 backdrop-blur-sm text-primary-foreground text-sm font-body font-medium rounded-full mb-4 border border-primary-foreground/20"
-          >
-            BITS Pilani Initiative
-          </motion.span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground font-medium tracking-wide">
             Sustainability
           </h2>
