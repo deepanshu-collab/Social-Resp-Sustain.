@@ -40,16 +40,13 @@ const galleryLabels: Record<CampusKey, string[]> = {
 
 const sectionIcons: Record<string, string> = {
   "Energy Conservation": "⚡",
-  "Water Conservation": "💧",
-  "Recycling": "♻️",
-  "Transportation": "🚲",
-  "Irrigation": "🌿",
-  "LED Energy Savings": "💡",
-  "Food Wastage Awareness": "🍃",
-  "Recycling & Reuse": "♻️",
-  "Awareness Initiatives": "📢",
-  "Green Initiatives": "🌱",
-  "Waste Management": "🗑️",
+  "Water & Waste Management": "💧",
+  "Energy Management & Awareness": "💡",
+  "Recycling & Circular Economy": "♻️",
+  "Energy Efficiency": "⚡",
+  "Water Conservation & Ecosystem Management": "🌿",
+  "Renewable Energy": "☀️",
+  "Water Conservation & Greening": "💧",
 };
 
 const CampusTabs = () => {
