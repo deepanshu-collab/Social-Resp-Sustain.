@@ -10,7 +10,6 @@ import campusPilaniExtra2 from "@/assets/campus-pilani-extra2.jpg";
 import campusDubaiExtra1 from "@/assets/campus-dubai-extra1.jpg";
 import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
 import campusDubaiExtra3 from "@/assets/campus-dubai-extra3.jpg";
-import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
 import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
 import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
 import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
