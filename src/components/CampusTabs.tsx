@@ -9,6 +9,8 @@ import campusPilaniExtra1 from "@/assets/campus-pilani-extra1.jpg";
 import campusPilaniExtra2 from "@/assets/campus-pilani-extra2.jpg";
 import campusDubaiExtra1 from "@/assets/campus-dubai-extra1.jpg";
 import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
+import campusDubaiExtra3 from "@/assets/campus-dubai-extra3.jpg";
+import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
 import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
 import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
 import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
@@ -25,14 +27,14 @@ const campusImages: Record<CampusKey, string> = {
 
 const campusGallery: Record<CampusKey, string[]> = {
   pilani: [campusPilaniExtra1],
-  dubai: [campusDubaiExtra1, campusDubaiExtra2],
+  dubai: [campusDubaiExtra1, campusDubaiExtra2, campusDubaiExtra3],
   goa: [campusGoaExtra1, campusGoaExtra2],
   hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
 };
 
 const galleryLabels: Record<CampusKey, string[]> = {
   pilani: ["Rooftop Solar Power Plant Installation"],
-  dubai: ["LED Lighting & Energy Efficiency", "Recycling & Awareness Initiatives"],
+  dubai: ["LED Lighting Systems", "Book Reuse & Paper Conservation", "Waste Segregation & Recycling"],
   goa: ["Solar Street Lighting & Renewable Energy", "Water Recycling & Green Campus"],
   hyderabad: ["Rooftop Solar & Smart Energy Systems", "Rainwater Harvesting & Green Corridors", "Herbal Garden & Biodiversity Zone"],
 };
