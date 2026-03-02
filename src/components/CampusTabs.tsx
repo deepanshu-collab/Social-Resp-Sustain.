@@ -25,17 +25,17 @@ const campusImages: Record<CampusKey, string> = {
 };
 
 const campusGallery: Record<CampusKey, string[]> = {
-  pilani: [campusPilaniExtra1, campusPilaniExtra2, campusExtra1],
+  pilani: [campusPilaniExtra1, campusPilaniExtra2],
   dubai: [campusDubaiExtra1, campusDubaiExtra2],
   goa: [campusGoaExtra1, campusGoaExtra2],
   hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
 };
 
 const galleryLabels: Record<CampusKey, string[]> = {
-  pilani: ["Solar Panel Installation", "Campus Green Infrastructure", "Sustainability Initiatives"],
-  dubai: ["LED Energy Systems", "Recycling & Conservation"],
-  goa: ["Solar Street Lighting", "Eco-friendly Campus"],
-  hyderabad: ["Rooftop Solar Systems", "Green Campus Development", "Herbal Garden & Biodiversity"],
+  pilani: ["Solar Power Plant & Energy Infrastructure", "Water Conservation & STP Systems"],
+  dubai: ["LED Lighting & Energy Efficiency", "Recycling & Awareness Initiatives"],
+  goa: ["Solar Street Lighting & Renewable Energy", "Water Recycling & Green Campus"],
+  hyderabad: ["Rooftop Solar & Smart Energy Systems", "Rainwater Harvesting & Green Corridors", "Herbal Garden & Biodiversity Zone"],
 };
 
 const sectionIcons: Record<string, string> = {
@@ -173,16 +173,18 @@ const CampusTabs = () => {
                         transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
                         className="rounded-xl overflow-hidden border border-border shadow-md group"
                       >
-                        <div className="relative bg-foreground/5">
+                  <div className="relative overflow-hidden">
                           <img
                             src={img}
                             alt={labels[i] || `${data.title} sustainability`}
-                            className="w-full h-48 md:h-56 object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-500"
+                            className="w-full h-52 md:h-64 object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                             loading="lazy"
                           />
+                          <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
-                        <div className="px-4 py-2.5 bg-lavender">
-                          <p className="text-sm font-body font-medium text-foreground/80">
+                        <div className="px-4 py-3 bg-lavender border-t border-border">
+                          <p className="text-sm font-body font-semibold text-foreground/80 flex items-center gap-2">
+                            <Leaf className="w-3.5 h-3.5 text-green-accent flex-shrink-0" />
                             {labels[i] || "Sustainability Initiative"}
                           </p>
                         </div>
