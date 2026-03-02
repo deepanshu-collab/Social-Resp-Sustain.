@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
-import { Atom, Fuel, Wind, Recycle, FlaskConical, BrainCircuit, Quote } from "lucide-react";
+import { Atom, FlaskConical, Quote } from "lucide-react";
 
-const researchVerticals = [
-  { title: "Hydrogen", desc: "Production, Storage, and Utilization", icon: Atom },
-  { title: "Biofuels & Renewable Energy", desc: "Exploring alternative and greener power sources", icon: Fuel },
-  { title: "CCUS", desc: "Carbon Capture, Utilization, and Storage", icon: Wind },
-  { title: "E-mobility & Circular Economy", desc: "Driving sustainable transport and resource efficiency", icon: Recycle },
+const verticals = [
+  "Hydrogen: Production, Storage, and Utilization",
+  "Biofuels & Renewable Energy: Exploring alternative and greener power sources",
+  "CCUS: Carbon Capture, Utilization, and Storage",
+  "E-mobility & Circular Economy: Driving sustainable transport and resource efficiency",
 ];
 
 const innovations = [
@@ -23,9 +23,9 @@ const ArcsetSection = () => {
       transition={{ duration: 0.6 }}
       className="py-20 px-6 md:px-12 bg-lavender overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -36,131 +36,94 @@ const ArcsetSection = () => {
             <Atom className="w-4 h-4" />
             Research Excellence
           </motion.div>
-          <h2 className="text-3xl md:text-4xl font-display text-foreground font-semibold mb-3">
+          <h2 className="text-3xl md:text-4xl font-display text-foreground font-semibold mb-4">
             BITS Pilani Launches ARCSET
           </h2>
-          <p className="text-base font-body text-muted-foreground max-w-xl mx-auto">
+          <p className="text-base font-body text-muted-foreground">
             A Centre of Excellence for Sustainable Energy
           </p>
         </div>
 
-        {/* Intro Block */}
+        {/* Intro */}
         <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto mb-16 bg-card border border-border rounded-2xl p-8 md:p-10"
+          className="mb-12"
         >
           <p className="text-base font-body text-muted-foreground leading-relaxed mb-4">
             BITS Pilani has proudly inaugurated the{" "}
             <strong className="text-foreground">
               Advanced Research Centre for Sustainable Energy Technologies (ARCSET)
             </strong>
-            , a multi-campus Centre of Excellence dedicated to solving global energy challenges.
-          </p>
-          <p className="text-base font-body text-muted-foreground leading-relaxed">
-            ARCSET is designed to foster innovation, industry-academic collaboration, and cutting-edge research to provide scalable, affordable solutions for carbon emission reduction, energy security, and equitable access to green energy.
+            , a multi-campus Centre of Excellence dedicated to solving global energy challenges through innovation, industry-academic collaboration, and cutting-edge research.
           </p>
         </motion.div>
 
         {/* Research Verticals */}
-        <div className="mb-16">
-          <h3 className="text-xl md:text-2xl font-display text-foreground font-semibold mb-2 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="mb-12"
+        >
+          <h3 className="text-xl font-display text-foreground font-semibold mb-5">
             Key Research Verticals
           </h3>
-          <p className="text-sm font-body text-muted-foreground text-center mb-10 max-w-2xl mx-auto">
-            Eight primary areas accelerating India's journey toward net-zero emissions
-          </p>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {researchVerticals.map(({ title, desc, icon: Icon }, i) => (
-              <motion.div
-                key={title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-card border border-border rounded-2xl p-6 text-center hover:shadow-lg hover:border-primary/20 transition-all duration-300"
-              >
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                  <Icon className="w-6 h-6 text-primary" />
-                </div>
-                <h4 className="font-display text-sm font-semibold text-foreground mb-1.5">
-                  {title}
-                </h4>
-                <p className="font-body text-xs text-muted-foreground leading-relaxed">
-                  {desc}
-                </p>
-              </motion.div>
+          <ul className="space-y-3">
+            {verticals.map((item, i) => (
+              <li key={i} className="flex gap-3 text-sm font-body text-muted-foreground leading-relaxed">
+                <span className="text-primary mt-0.5 flex-shrink-0 font-bold">›</span>
+                {item}
+              </li>
             ))}
-          </div>
-        </div>
+          </ul>
+        </motion.div>
 
-        {/* Innovation & Leadership — two columns */}
-        <div className="grid md:grid-cols-5 gap-6">
-          {/* Innovation — 3 cols */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="md:col-span-3 bg-card border border-border rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <BrainCircuit className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="text-lg font-display text-foreground font-semibold">
-                Innovation & Approach
-              </h3>
-            </div>
-            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">
-              By partnering with industry leaders, start-ups, and policymakers, ARCSET functions as a premier technology platform. The center leverages advanced tools like molecular modelling, AI-ML, and high-throughput experiments to drive impactful initiatives:
-            </p>
-            <ul className="space-y-3">
-              {innovations.map((item, i) => (
-                <motion.li
-                  key={item}
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2 + i * 0.08 }}
-                  className="flex items-center gap-3 text-sm font-body text-foreground"
-                >
-                  <div className="w-6 h-6 rounded-md bg-green-accent/10 flex items-center justify-center flex-shrink-0">
-                    <FlaskConical className="w-3.5 h-3.5 text-green-accent" />
-                  </div>
-                  {item}
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+        {/* Innovation */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="mb-12"
+        >
+          <h3 className="text-xl font-display text-foreground font-semibold mb-3">
+            Innovation & Approach
+          </h3>
+          <p className="text-sm font-body text-muted-foreground leading-relaxed mb-5">
+            Partnering with industry leaders, start-ups, and policymakers, ARCSET leverages molecular modelling, AI-ML, and high-throughput experiments to drive initiatives such as:
+          </p>
+          <ul className="space-y-2.5">
+            {innovations.map((item, i) => (
+              <li key={i} className="flex items-center gap-3 text-sm font-body text-foreground">
+                <div className="w-5 h-5 rounded bg-green-accent/10 flex items-center justify-center flex-shrink-0">
+                  <FlaskConical className="w-3 h-3 text-green-accent" />
+                </div>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </motion.div>
 
-          {/* Leadership — 2 cols */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="md:col-span-2 bg-card border border-border rounded-2xl p-8 flex flex-col hover:shadow-lg transition-shadow duration-300"
-          >
-            <h3 className="text-lg font-display text-foreground font-semibold mb-4">
-              Leadership & Vision
-            </h3>
-            <p className="text-sm font-body text-muted-foreground leading-relaxed mb-6">
-              The inauguration during BITS Pilani's Diamond Jubilee Year was graced by Chief Guest Padma Bhushan Prof. J. B. Joshi and Guest of Honour Dr. Madhukar Garg.
-            </p>
-            <div className="bg-lavender rounded-xl p-6 border-l-4 border-primary mt-auto relative overflow-hidden">
-              <Quote className="w-5 h-5 text-primary/30 absolute top-4 right-4" />
-              <p className="text-sm font-body text-foreground italic leading-relaxed mb-3">
-                "ARCSET embodies our dedication to tackling one of the major challenges of our times — global transformation towards sustainable energy."
-              </p>
-              <p className="text-xs font-body text-muted-foreground font-semibold">
-                — Prof. Ramgopal Rao, Vice-Chancellor
-              </p>
-            </div>
-          </motion.div>
-        </div>
+        {/* Quote */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="border-l-4 border-primary pl-6 relative"
+        >
+          <Quote className="w-5 h-5 text-primary/30 absolute -top-1 -left-1" />
+          <p className="text-sm font-body text-foreground italic leading-relaxed mb-2">
+            "ARCSET embodies our dedication to tackling one of the major challenges of our times — global transformation towards sustainable energy."
+          </p>
+          <p className="text-xs font-body text-muted-foreground font-semibold">
+            — Prof. Ramgopal Rao, Vice-Chancellor, BITS Pilani
+          </p>
+        </motion.div>
       </div>
     </motion.section>
   );
