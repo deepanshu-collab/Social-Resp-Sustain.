@@ -1,4 +1,5 @@
-import { FileText, Globe, Leaf, Shield, BookOpen, Users, BarChart3, Award } from "lucide-react";
+import { FileText, Globe, Leaf, Shield, BookOpen, Users, BarChart3, Award, ClipboardList } from "lucide-react";
+import sdgImage from "@/assets/sdg-goals.webp";
 
 const principles = [
   { label: "Climate Action Plan", icon: Leaf },
@@ -11,6 +12,7 @@ const principles = [
   { label: "Anti-Bribery & Anti-Corruption Policy", icon: Shield },
   { label: "Code of Ethics", icon: BookOpen },
   { label: "Student Club", icon: Users },
+  { label: "Minutes", icon: ClipboardList },
   { label: "Carbon Reduction Strategic Plan", icon: Leaf },
 ];
 
@@ -23,11 +25,11 @@ const GuidingPrinciples = () => {
             <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-4">
               A Campus That Breathes Sustainability
             </h3>
-            <div className="w-full h-64 rounded-xl overflow-hidden bg-muted">
+            <div className="w-full rounded-xl overflow-hidden bg-muted">
               <img
-                src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?w=800"
-                alt="Green campus landscape"
-                className="w-full h-full object-cover"
+                src={sdgImage}
+                alt="UN Sustainable Development Goals"
+                className="w-full h-auto object-contain"
                 loading="lazy"
               />
             </div>

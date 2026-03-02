@@ -1,4 +1,4 @@
-import campusImage from "@/assets/campus-pilani.jpg";
+import campusImage from "@/assets/campus-pilani.webp";
 
 const IntroSection = () => {
   return (
@@ -18,7 +18,7 @@ const IntroSection = () => {
         <div className="rounded-xl overflow-hidden shadow-lg">
           <img
             src={campusImage}
-            alt="BITS Pilani Campus"
+            alt="BITS Pilani Campus with clock tower"
             className="w-full h-80 object-cover"
             loading="lazy"
           />

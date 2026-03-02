@@ -1,5 +1,6 @@
 import { Menu } from "lucide-react";
 import { useState } from "react";
+import bitsLogo from "@/assets/bits-logo.jpeg";
 
 const navItems = [
   "Overview", "The Journey", "Leadership", "Governance",
@@ -12,14 +13,7 @@ const Header = () => {
   return (
     <header className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-12 py-4">
       <div className="flex items-center gap-3">
-        <div className="w-12 h-12 rounded-full bg-primary-foreground/20 backdrop-blur-sm flex items-center justify-center border border-primary-foreground/30">
-          <span className="font-display text-primary-foreground text-sm font-bold">BP</span>
-        </div>
-        <div className="text-primary-foreground">
-          <h1 className="text-xl font-bold font-display tracking-wide leading-tight">BITS Pilani</h1>
-          <p className="text-xs opacity-80 font-body">Pilani | Dubai | Goa | Hyderabad | Mumbai</p>
-          <p className="text-[10px] opacity-60 font-body italic">An Institution of Eminence</p>
-        </div>
+        <img src={bitsLogo} alt="BITS Pilani Logo" className="h-14 w-auto" />
       </div>
       <button
         onClick={() => setMenuOpen(!menuOpen)}
