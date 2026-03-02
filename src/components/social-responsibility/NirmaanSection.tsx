@@ -83,15 +83,9 @@ const NirmaanSection = () => {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="text-muted-foreground font-body leading-relaxed text-base md:text-lg border-l-4 border-green-accent pl-5 mb-10"
             >
-              Nirmaan is an NGO, the Hyderabad-based chapter of which was started
-              in 2005. From its inauguration by Ms Katherine D, the US Consul
-              General, in the presence of Prof. V.S. Rao, Director, BITS Pilani
-              Hyderabad Campus, Nirmaan has been actively involved in nurturing
-              social innovations, promoting volunteerism on campus and instilling
-              social leadership among the youth. Today it stands as an
-              organisation with close to 200 active members. Not only has it
-              enriched the lives of its members but has also shaped a culture of
-              "giving" on campus.
+              <strong>Nirmaan Organization</strong>, founded in 2005 by alumni of BITS Pilani, is a pioneering non-profit dedicated to transforming lives and building a more inclusive and sustainable future. Led by <strong>Founder and Global CEO Sri Mayur Patnala</strong>, Nirmaan has impacted over <strong>5 million lives</strong> across <strong>26 states and union territories</strong> in India, marking <strong>20 years of impactful service</strong>.
+              <br /><br />
+              Through our transformative empowerment programs in <strong>Holistic Education, Economic Empowerment, Health &amp; Wellbeing, Environment &amp; Sustainability, Rural Development, Community Development, Disaster Relief &amp; Rehabilitation</strong>, we create equal opportunities for individuals, regardless of their background, to thrive with <strong>dignity, opportunity, and compassion</strong>.
             </motion.p>
 
             {/* Highlight Cards */}
