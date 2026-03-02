@@ -115,6 +115,8 @@ export const campusContent: Record<
           "Sustainability events including Green Quiz and Best out of Waste competitions are held during Quark, the annual technical festival.",
         ],
       },
+    ],
+  },
   hyderabad: {
     title: "BITS Pilani, Hyderabad Campus",
     intro:
