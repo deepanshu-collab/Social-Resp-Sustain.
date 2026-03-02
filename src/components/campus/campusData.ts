@@ -33,6 +33,16 @@ export const campusContent: Record<
           "Two Sewage Treatment Plants (1 MLD and 1.5 MLD) operate around the clock to treat domestic sewage. The treated effluent is reused for HVAC cooling tower makeup, toilet flushing, and landscape irrigation.",
         ],
       },
+      {
+        heading: "Infrastructure & Green Mobility",
+        items: [
+          "Since 2014, all CFL, Metal Halide, and Fluorescent fixtures have been replaced with energy-saving LED fixtures across hostels, residential quarters, and academic blocks under Project Parivartan.",
+          "Motion sensors have been installed in renovated hostel toilets to control lights and exhaust fans, reducing unnecessary electricity consumption.",
+          "All overhead tanks and water coolers are fitted with floats, sensors, and actuator valves to prevent overflow and optimize water distribution.",
+          "Irrigation water for campus landscaping is sourced entirely from the in-house STP, maintaining lush green gardens with treated domestic-quality water.",
+          "Battery-operated vehicles have been introduced on campus; 5,000+ students are encouraged to use cycles for internal movement and public transportation externally.",
+        ],
+      },
     ],
   },
   dubai: {
