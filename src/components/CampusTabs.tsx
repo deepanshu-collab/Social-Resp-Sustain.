@@ -24,14 +24,14 @@ const campusImages: Record<CampusKey, string> = {
 };
 
 const campusGallery: Record<CampusKey, string[]> = {
-  pilani: [campusPilaniExtra1, campusPilaniExtra2],
+  pilani: [campusPilaniExtra1],
   dubai: [campusDubaiExtra1, campusDubaiExtra2],
   goa: [campusGoaExtra1, campusGoaExtra2],
   hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
 };
 
 const galleryLabels: Record<CampusKey, string[]> = {
-  pilani: ["Solar Power Plant & Energy Infrastructure", "Water Conservation & STP Systems"],
+  pilani: ["Rooftop Solar Power Plant Installation"],
   dubai: ["LED Lighting & Energy Efficiency", "Recycling & Awareness Initiatives"],
   goa: ["Solar Street Lighting & Renewable Energy", "Water Recycling & Green Campus"],
   hyderabad: ["Rooftop Solar & Smart Energy Systems", "Rainwater Harvesting & Green Corridors", "Herbal Garden & Biodiversity Zone"],
