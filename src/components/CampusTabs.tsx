@@ -13,7 +13,6 @@ import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
 import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
 import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
 import campusHyderabadExtra2 from "@/assets/campus-hyderabad-extra2.jpg";
-import campusExtra1 from "@/assets/campus-extra-1.jpg";
 import campusExtra2 from "@/assets/campus-extra-2.jpg";
 import { campuses, campusContent, type CampusKey } from "@/components/campus/campusData";
 
