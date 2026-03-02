@@ -5,9 +5,9 @@ const principles = [
   ["Climate Action Plan", "SDG Impact"],
   ["Sustainable Investment Policy", "HESI Community Member"],
   ["Sustainable Procurement Policy", "Race to Zero"],
-  ["Green Audit Report", "Anti-Bribery & Anti-Corruption Policy"],
-  ["Code of Ethics", "Student Club"],
-  ["Minutes", "Carbon Reduction Strategic Plan"],
+  ["Green Audit Report", "Student Club"],
+  ["Carbon Reduction Strategic Plan", "Sustainability Committee"],
+  ["Renewable Energy Club", ""],
 ];
 
 const GuidingPrinciples = () => {
