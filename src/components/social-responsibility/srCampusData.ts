@@ -89,7 +89,17 @@ export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
         heading: "Humanitarian Relief & Educational Outreach",
         items: [
           "Students actively engage in relief efforts, such as gathering essential materials for earthquake-affected families in Afghanistan. Health initiatives include campus-wide blood donation camps and Flu Vaccination Drives.",
+          "In collaboration with the Emirates Red Crescent, BPDC conducted a relief donation drive to aid families affected by the earthquake in Afghanistan, collecting essential relief materials reflecting solidarity and dedication to humanitarian support.",
           "The campus conducts hands-on AI and Machine Learning workshops for local schools to spark early interest in technology, alongside Spoken English classes for facility management staff.",
+        ],
+      },
+      {
+        heading: "Community Volunteering & Social Awareness",
+        items: [
+          "Students actively participated in volunteering activities at the BAPS Mandir in Abu Dhabi, assisting with organizational tasks to support the Mandir's smooth functioning.",
+          "BPDC organized interactive, pledge-based initiatives like the Gender Awareness Trivia Challenge and the Voices & Vitality Awareness Stall, promoting important dialogues on gender equality, men's health, and the elimination of violence against women.",
+          "Spoken English classes were organized for facility management (FM) staff members to support their skill development and improve their communication abilities.",
+          "A Cybercrime Awareness Talk was conducted in collaboration with Dubai Police to educate students on online safety, digital responsibility, and the legal implications of cyber offenses.",
         ],
       },
     ],

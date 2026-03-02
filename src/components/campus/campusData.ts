@@ -71,6 +71,12 @@ export const campusContent: Record<
           "To reduce plastic consumption, students created biodegradable paper bags from newspapers for use in the campus Mini Mart and canteen.",
         ],
       },
+      {
+        heading: "Green Campus & Plantation",
+        items: [
+          "Environmental sustainability was encouraged through a Tree Plantation Drive on campus. Students and staff contributed to creating a greener campus and spreading awareness about ecological responsibility.",
+        ],
+      },
     ],
   },
   goa: {
