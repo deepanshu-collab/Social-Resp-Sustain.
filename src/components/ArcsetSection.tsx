@@ -17,7 +17,7 @@ const innovations = [
 const cardHover = {
   scale: 1.03,
   y: -4,
-  transition: { type: "spring", stiffness: 300 },
+  transition: { type: "spring" as const, stiffness: 300 },
 };
 
 const ArcsetSection = () => {
