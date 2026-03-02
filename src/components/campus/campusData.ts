@@ -12,9 +12,9 @@ export const campusContent: Record<
   { title: string; intro: string; sections: { heading: string; items: string[] }[] }
 > = {
   pilani: {
-    title: "BITS Pilani — Zero Discharge Campus",
+    title: "BITS Pilani, Pilani Campus",
     intro:
-      "BITS Pilani is steadily moving towards sustainability in electricity, water & use of natural resources, taking us closer to our aim of becoming a zero-discharge campus. Solar power plants and energy-saving fixtures have been introduced. Water is treated scientifically and recycled for flushing systems & horticulture. Battery-operated vehicles are being introduced and 5000+ students are encouraged to use cycles and public transportation.",
+      "BITS Pilani Pilani Campus is moving toward a zero-discharge model through large-scale solar adoption, LED and smart lighting, water recycling, recharge systems, and efficient fixtures, alongside cycling, public transport, and battery vehicles. Waste is segregated and processed into biogas and manure, supported by continuous sewage treatment, creating an integrated system for energy savings, water reuse, and sustainable resource management.",
     sections: [
       {
         heading: "Energy Conservation",
@@ -59,9 +59,9 @@ export const campusContent: Record<
     ],
   },
   dubai: {
-    title: "Dubai Campus — Awareness & Conservation",
+    title: "BITS Pilani, Dubai Campus",
     intro:
-      "Campus is steadily moving towards sustainability in electricity, water & use of natural resources. Water conservation and systematic distribution of potable water supply are managed and monitored efficiently.",
+      "BITS Pilani Dubai Campus is advancing sustainability through energy efficiency, recycling, resource conservation, and awareness initiatives. The campus promotes responsible consumption by running drives on food wastage, energy and water conservation, and Earth Day/Earth Hour participation, while significantly reducing electricity use through LED lighting that cuts carbon emissions. Recycling systems collect paper and materials for municipal processing, textbooks are reused through a book-sharing system, and usable exam papers are repurposed into pads.",
     sections: [
       {
         heading: "LED Energy Savings",
@@ -99,9 +99,9 @@ export const campusContent: Record<
     ],
   },
   goa: {
-    title: "KK Birla Goa Campus — Leading the Way in Energy, Water & Eco-Friendly Practices",
+    title: "BITS Pilani, KK Birla Goa Campus",
     intro:
-      "The campus is steadily moving towards sustainability in electricity and water usage. Water conservation and systematic distribution of portable water supply are managed and monitored efficiently. Water used by campus residents is treated scientifically and recycled for use on campus. Campus had aimed to reduce its dependence on conventional power. In this regard, solar power plants and energy-saving fixtures have been introduced and installed on the campus. The campus maintains lush green gardens with a rich collection of flora and fauna. Every year, during the monsoon, tree-plantation drives are conducted with the help of students.",
+      "BITS Pilani K K Birla Goa Campus is advancing sustainability through renewable energy adoption, water conservation, recycling, and eco-friendly campus practices. The campus promotes solar water heating, solar street lighting, LED retrofits, and planned on-grid solar expansion to reduce conventional power use, while groundwater recharge systems, automated tank controls, and reuse of treated sewage water support efficient water management. Private vehicles are restricted to limit emissions, and green mobility is encouraged through walking corridors and public transport.",
     sections: [
       {
         heading: "Energy Conservation",
@@ -145,9 +145,9 @@ export const campusContent: Record<
     ],
   },
   hyderabad: {
-    title: "Hyderabad Campus — Advancing Green Infrastructure & Smart Sustainability",
+    title: "BITS Pilani, Hyderabad Campus",
     intro:
-      "BITS Pilani, Hyderabad Campus is committed to building a sustainable future through energy-efficient infrastructure, water management, and green initiatives. The campus integrates modern technology with environmental stewardship to create a model of responsible campus living.",
+      "BITS Pilani Hyderabad Campus promotes sustainability through integrated initiatives in renewable energy, water conservation, waste management, and green campus development. The campus uses large-scale rooftop solar systems, solar street lights, solar hot water units, LED lighting, timers, and motion sensors to reduce electricity consumption, while rainwater harvesting pits, aerators, push taps, waterless urinals, and reuse of treated water for flushing and gardening support efficient water management.",
     sections: [
       {
         heading: "Energy Conservation",

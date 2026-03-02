@@ -1,17 +1,41 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Leaf } from "lucide-react";
-import campusGoa from "@/assets/campus-goa.webp";
-import campusDubai from "@/assets/campus-dubai.jpg";
-import campusPilani from "@/assets/campus-pilani.webp";
-import campusHyderabad from "@/assets/campus-hyderabad.jpg";
+import { MapPin, Leaf, ChevronRight } from "lucide-react";
+import campusPilaniMain from "@/assets/campus-pilani-main.jpg";
+import campusDubaiMain from "@/assets/campus-dubai-main.jpg";
+import campusGoaMain from "@/assets/campus-goa-main.jpg";
+import campusHyderabadMain from "@/assets/campus-hyderabad-main.jpg";
+import campusPilaniExtra1 from "@/assets/campus-pilani-extra1.jpg";
+import campusPilaniExtra2 from "@/assets/campus-pilani-extra2.jpg";
+import campusDubaiExtra1 from "@/assets/campus-dubai-extra1.jpg";
+import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
+import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
+import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
+import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
+import campusHyderabadExtra2 from "@/assets/campus-hyderabad-extra2.jpg";
+import campusExtra1 from "@/assets/campus-extra-1.jpg";
+import campusExtra2 from "@/assets/campus-extra-2.jpg";
 import { campuses, campusContent, type CampusKey } from "@/components/campus/campusData";
 
 const campusImages: Record<CampusKey, string> = {
-  pilani: campusPilani,
-  dubai: campusDubai,
-  goa: campusGoa,
-  hyderabad: campusHyderabad,
+  pilani: campusPilaniMain,
+  dubai: campusDubaiMain,
+  goa: campusGoaMain,
+  hyderabad: campusHyderabadMain,
+};
+
+const campusGallery: Record<CampusKey, string[]> = {
+  pilani: [campusPilaniExtra1, campusPilaniExtra2, campusExtra1],
+  dubai: [campusDubaiExtra1, campusDubaiExtra2],
+  goa: [campusGoaExtra1, campusGoaExtra2],
+  hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
+};
+
+const galleryLabels: Record<CampusKey, string[]> = {
+  pilani: ["Solar Panel Installation", "Campus Green Infrastructure", "Sustainability Initiatives"],
+  dubai: ["LED Energy Systems", "Recycling & Conservation"],
+  goa: ["Solar Street Lighting", "Eco-friendly Campus"],
+  hyderabad: ["Rooftop Solar Systems", "Green Campus Development", "Herbal Garden & Biodiversity"],
 };
 
 const sectionIcons: Record<string, string> = {
@@ -31,6 +55,8 @@ const sectionIcons: Record<string, string> = {
 const CampusTabs = () => {
   const [active, setActive] = useState<CampusKey>("pilani");
   const data = campusContent[active];
+  const gallery = campusGallery[active];
+  const labels = galleryLabels[active];
 
   return (
     <motion.section
@@ -96,25 +122,24 @@ const CampusTabs = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
           >
-            {/* Hero Image with Overlay */}
-            <div className="relative w-full h-72 md:h-96 overflow-hidden">
+            {/* Hero Image — fully visible, center-aligned */}
+            <div className="relative w-full bg-foreground/5">
               <motion.img
                 key={active + "-img"}
-                initial={{ scale: 1.1, opacity: 0 }}
+                initial={{ scale: 1.03, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-full object-cover"
+                className="w-full h-72 md:h-[420px] object-contain mx-auto"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-foreground/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.2 }}
-                  className="text-2xl md:text-3xl font-display text-primary-foreground font-semibold drop-shadow-lg"
+                  className="text-2xl md:text-3xl font-display text-white font-semibold drop-shadow-lg"
                 >
                   {data.title}
                 </motion.h3>
@@ -131,6 +156,41 @@ const CampusTabs = () => {
               >
                 {data.intro}
               </motion.p>
+
+              {/* Gallery — Solar Panels, Infrastructure etc. */}
+              {gallery.length > 0 && (
+                <div className="mb-10">
+                  <h4 className="text-lg font-display text-foreground font-semibold mb-4 flex items-center gap-2">
+                    <ChevronRight className="w-5 h-5 text-green-accent" />
+                    Campus Sustainability Infrastructure
+                  </h4>
+                  <div className={`grid gap-4 ${gallery.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2"}`}>
+                    {gallery.map((img, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 12 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
+                        className="rounded-xl overflow-hidden border border-border shadow-md group"
+                      >
+                        <div className="relative bg-foreground/5">
+                          <img
+                            src={img}
+                            alt={labels[i] || `${data.title} sustainability`}
+                            className="w-full h-48 md:h-56 object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-500"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="px-4 py-2.5 bg-lavender">
+                          <p className="text-sm font-body font-medium text-foreground/80">
+                            {labels[i] || "Sustainability Initiative"}
+                          </p>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Section Cards Grid */}
               <div className="grid md:grid-cols-2 gap-6">
