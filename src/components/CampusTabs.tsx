@@ -34,7 +34,7 @@ const campusGallery: Record<CampusKey, string[]> = {
 const galleryLabels: Record<CampusKey, string[]> = {
   pilani: ["Rooftop Solar Power Plant Installation"],
   dubai: ["LED Lighting Systems", "Book Reuse & Paper Conservation", "Waste Segregation & Recycling"],
-  goa: ["Solar Street Lighting & Renewable Energy", "Water Recycling & Green Campus"],
+  goa: ["Solar Water Heaters & Green Campus", "Sewage Treatment Plant"],
   hyderabad: ["Rooftop Solar & Smart Energy Systems", "Rainwater Harvesting & Green Corridors", "Herbal Garden & Biodiversity Zone"],
 };
 
