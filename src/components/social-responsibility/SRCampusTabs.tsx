@@ -1,19 +1,35 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Heart, ChevronRight } from "lucide-react";
+import { Heart, ChevronRight, Leaf } from "lucide-react";
 import { srCampuses, srCampusContent, type SRCampusKey } from "./srCampusData";
+import campusPilaniMain from "@/assets/campus-pilani-main.jpg";
+import campusDubaiMain from "@/assets/campus-dubai-main.jpg";
+import campusGoaMain from "@/assets/campus-goa-main.jpg";
+import campusHyderabadMain from "@/assets/campus-hyderabad-main.jpg";
+
+const campusImages: Record<SRCampusKey, string> = {
+  pilani: campusPilaniMain,
+  dubai: campusDubaiMain,
+  goa: campusGoaMain,
+  hyderabad: campusHyderabadMain,
+};
 
 const sectionIcons: Record<string, string> = {
-  "Community Outreach": "🤝",
-  "Social Welfare Initiatives": "💛",
-  "Education & Empowerment": "📚",
-  "Community Development": "🏘️",
-  "Student-Led Impact": "🎓",
-  "Outreach & Awareness": "📣",
+  "Community Outreach & Education": "📚",
+  "Empowerment & Campus Cooperatives": "🤝",
+  "Charitable Health & Relief Initiatives": "🏥",
+  "Environmental Conservation & Awareness": "🌍",
+  "Operation Reuse & Sustainability": "♻️",
+  "Humanitarian Relief & Educational Outreach": "🎓",
+  "Innovation & Economic Empowerment": "💡",
+  "Health, Education & Community Welfare": "💛",
+  "Rural & Community Development": "🏘️",
+  "Health & Environment": "🌿",
+  "Social Philanthropy & Student Development": "📣",
 };
 
 const SRCampusTabs = () => {
-  const [active, setActive] = useState<SRCampusKey>("goa");
+  const [active, setActive] = useState<SRCampusKey>("pilani");
   const data = srCampusContent[active];
 
   return (
@@ -79,17 +95,32 @@ const SRCampusTabs = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
           >
+            {/* Hero Image */}
+            <div className="relative w-full overflow-hidden">
+              <motion.img
+                key={active + "-img"}
+                initial={{ scale: 1.05, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                src={campusImages[active]}
+                alt={data.title}
+                className={`w-full h-72 md:h-[420px] object-cover ${active === "pilani" ? "object-top" : ""}`}
+                loading="lazy"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
+                <motion.h3
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.2 }}
+                  className="text-2xl md:text-3xl font-display text-white font-semibold drop-shadow-lg"
+                >
+                  {data.title}
+                </motion.h3>
+              </div>
+            </div>
+
             {/* Content Body */}
             <div className="p-8 md:p-12">
-              <motion.h3
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-6"
-              >
-                {data.title}
-              </motion.h3>
-
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -100,7 +131,7 @@ const SRCampusTabs = () => {
               </motion.p>
 
               {/* Section Cards Grid */}
-              <div className="grid md:grid-cols-2 gap-6">
+              <div className={`grid gap-6 ${data.sections.length === 2 ? "md:grid-cols-2" : data.sections.length >= 3 ? "md:grid-cols-2 lg:grid-cols-3" : ""}`}>
                 {data.sections.map((section, sIdx) => (
                   <motion.div
                     key={section.heading}

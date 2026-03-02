@@ -1,9 +1,10 @@
-export type SRCampusKey = "goa" | "pilani" | "dubai";
+export type SRCampusKey = "pilani" | "dubai" | "goa" | "hyderabad";
 
 export const srCampuses: { key: SRCampusKey; label: string }[] = [
-  { key: "goa", label: "Goa Campus" },
   { key: "pilani", label: "Pilani Campus" },
   { key: "dubai", label: "Dubai Campus" },
+  { key: "goa", label: "KK Birla Goa Campus" },
+  { key: "hyderabad", label: "Hyderabad Campus" },
 ];
 
 export interface SRCampusContent {
@@ -13,48 +14,31 @@ export interface SRCampusContent {
 }
 
 export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
-  goa: {
-    title: "BITS Pilani, K K Birla Goa Campus",
-    intro:
-      "BITS Pilani K K Birla Goa Campus actively promotes social responsibility through student-driven initiatives, community outreach, and welfare activities that create a lasting positive impact on society.",
-    sections: [
-      {
-        heading: "Community Outreach",
-        items: [
-          "Nirmaan — a student-run organisation focused on education and community welfare for underprivileged sections of society.",
-          "Regular blood donation drives and health awareness campaigns in collaboration with local hospitals.",
-          "Student volunteers conduct teaching programmes at local government schools and orphanages.",
-        ],
-      },
-      {
-        heading: "Social Welfare Initiatives",
-        items: [
-          "Annual collection and distribution drives for clothing, books, and essentials to nearby villages.",
-          "Awareness campaigns on hygiene, digital literacy, and environmental conservation for local communities.",
-          "Collaboration with NGOs for disaster relief efforts and rehabilitation programmes.",
-        ],
-      },
-    ],
-  },
   pilani: {
     title: "BITS Pilani, Pilani Campus",
     intro:
-      "BITS Pilani Pilani Campus has a rich tradition of social engagement, with multiple student organisations and faculty-led programmes dedicated to uplifting communities in and around Pilani.",
+      "BITS Pilani Pilani Campus has a rich tradition of social engagement, with multiple student organisations and faculty-led programmes dedicated to uplifting communities in and around Pilani through education, empowerment, health initiatives, and disaster relief.",
     sections: [
       {
-        heading: "Education & Empowerment",
+        heading: "Community Outreach & Education",
         items: [
-          "Nirmaan chapter at Pilani runs adult literacy programmes, career guidance workshops, and free tuition for village children.",
-          "Centre for Entrepreneurial Leadership (CEL) supports social entrepreneurship ventures by students.",
-          "Faculty-led research projects addressing rural healthcare, clean water, and sustainable agriculture.",
+          "Nirmaan: Initiated in February 2005 by BITSians, this student-led NGO is committed to a poverty-free, knowledge-powered, and economically empowered nation. It provides education and livelihood opportunities for underprivileged people.",
+          "NSS Pilani: Composed of enthusiastic volunteers and teachers, NSS focuses on comprehensive and sustainable models for community development, making students responsible citizens dedicated to improving the country.",
         ],
       },
       {
-        heading: "Community Development",
+        heading: "Empowerment & Campus Cooperatives",
         items: [
-          "Annual cultural and sports events open to the local community, fostering town-gown relationships.",
-          "Student-led blood donation camps, tree plantation drives, and Swachh Bharat campaigns.",
-          "Partnerships with local self-help groups and cooperatives for skill development and livelihood training.",
+          "Pilani Innovation and Entrepreneurship Development Society (PIEDS): Its core agenda is to inspire, nurture, grow, and bring startups and social innovations to reality.",
+          "BITS Alumni Trust Initiative: Fosters community development in and around Pilani by providing an ecosystem for skill training, job creation, health, education, entrepreneurship, and women's rights.",
+          "Society for Student Mess Services (SSMS): A student-run body managing the financial and operational affairs of 7 messes and 1 all-night canteen, employing nearly 200 mess workers for over 3,500 students.",
+        ],
+      },
+      {
+        heading: "Charitable Health & Relief Initiatives",
+        items: [
+          "The campus actively organizes free medical check-up camps, blood donation drives, and Yoga wellness camps for nearby villages.",
+          "During the COVID-19 pandemic, the institute provided massive community relief, including free vaccination camps, isolation centers, dry ration distribution, and cash awards honoring frontline \"Corona Warriors.\"",
         ],
       },
     ],
@@ -65,19 +49,76 @@ export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
       "BITS Pilani Dubai Campus nurtures a culture of giving back through student organisations, community service programmes, and collaborations that extend the institution's impact beyond the classroom.",
     sections: [
       {
-        heading: "Student-Led Impact",
+        heading: "Environmental Conservation & Awareness",
         items: [
-          "Active student clubs organise charity fundraisers, food drives, and volunteering events throughout the year.",
-          "Collaborations with Dubai-based NGOs for community service and youth mentorship programmes.",
-          "Cultural exchange and inclusion events that celebrate diversity and promote social harmony.",
+          "Earth Day & Earth Hour: Actively celebrated by planting saplings, organizing online awareness events, and turning off non-essential campus lights to support global environmental movements.",
+          "Awareness Drives: Posters across the campus and dining halls encourage energy and water conservation while highlighting the environmental impact of food wastage.",
         ],
       },
       {
-        heading: "Outreach & Awareness",
+        heading: "Operation Reuse & Sustainability",
         items: [
-          "Mental health awareness campaigns and peer counselling support systems on campus.",
-          "Environmental awareness drives including beach clean-ups and sustainability workshops.",
-          "Donation drives for clothing, school supplies, and essentials benefitting workers' welfare initiatives.",
+          "Paper Bags: Students hand-made biodegradable bags from newspapers and donated them to the campus Mini Mart and Canteen to combat plastic use.",
+          "Cloth Donation: The Social and Environment Club annually collects clothes and bedding for donation to the Emirates Red Crescent.",
+          "The Book Room: Used textbooks are made available for students to borrow, reducing the ecological footprint of printed books.",
+          "Recycled Pads: Usable papers from old exam booklets are repurposed into scribbling pads for students and faculty.",
+        ],
+      },
+      {
+        heading: "Humanitarian Relief & Educational Outreach",
+        items: [
+          "Students actively engage in relief efforts, such as gathering essential materials for earthquake-affected families in Afghanistan. Health initiatives include campus-wide blood donation camps and Flu Vaccination Drives.",
+          "The campus conducts hands-on AI and Machine Learning workshops for local schools to spark early interest in technology, alongside Spoken English classes for facility management staff.",
+        ],
+      },
+    ],
+  },
+  goa: {
+    title: "BITS Pilani, KK Birla Goa Campus",
+    intro:
+      "BITS Pilani KK Birla Goa Campus actively promotes social responsibility through student-driven initiatives, community outreach, innovation support, and welfare activities that create a lasting positive impact on society.",
+    sections: [
+      {
+        heading: "Innovation & Economic Empowerment",
+        items: [
+          "BITS Goa Innovation, Incubation & Entrepreneurship Society (BGIIES): Registered in February 2020, the society promotes innovation and entrepreneurship education, establishing Business Incubators to support innovation-based startups.",
+          "Self-Help Groups: Campus initiatives train women in local slums to create and market sustainable handicrafts (like eco-friendly Holi colors), fostering their financial independence.",
+        ],
+      },
+      {
+        heading: "Health, Education & Community Welfare",
+        items: [
+          "Medical Outreach: Free eye check-up camps distributing subsidized spectacles, alongside breast cancer awareness and screening camps for nearby communities.",
+          "Inclusivity: The flagship \"Udaan\" sports festival provides a platform for differently-abled children. Volunteers support education of adopted slum children and donate occupational therapy equipment to special schools.",
+          "Campus Harmony: Traditions like the \"Meal of Joy\" and mess worker sports championships celebrate housekeeping, security, and mess staff.",
+        ],
+      },
+    ],
+  },
+  hyderabad: {
+    title: "BITS Pilani, Hyderabad Campus",
+    intro:
+      "BITS Pilani Hyderabad Campus drives social impact through its NSS unit of 300 active volunteers, village adoption programmes, health campaigns, environmental drives, and student mentorship initiatives under the motto \"NOT ME BUT YOU.\"",
+    sections: [
+      {
+        heading: "Rural & Community Development",
+        items: [
+          "Village Adoption: Volunteers have adopted three local villages to petition grievances, improve school infrastructure, and provide basic education, hygiene, career guidance, and financial information.",
+          "Women's Empowerment: Every Deepavali, volunteers partner with Nirmaan to train unemployed village women in candle making, helping to market the candles and instill entrepreneurial confidence.",
+        ],
+      },
+      {
+        heading: "Health & Environment",
+        items: [
+          "Blood Donation: Conducts a bi-annual blood donation drive with the Red Cross, collecting over 1,500 units of blood since its inception.",
+          "Green Cover & Waste: The campus has planted over 7,000 saplings with an impressive 80% survival rate. Volunteers educate neighbouring schools on making eco-friendly clay idols and conduct regular safe waste disposal drives.",
+        ],
+      },
+      {
+        heading: "Social Philanthropy & Student Development",
+        items: [
+          "Orphanage & Relief Outreach: Through the Prathiba initiative, volunteers visit orphanages to educate and provide stationery. The Sahara Initiative runs a door-to-door drive collecting clothing, blankets, and books for hundreds of street children.",
+          "Mentorship & Leadership: Over 137 volunteers form a peer support structure in the \"Be A Mentor\" program. Faculty designs an \"Effective Leadership Program\" to develop public speaking, professional ethics, and social responsibility.",
         ],
       },
     ],
