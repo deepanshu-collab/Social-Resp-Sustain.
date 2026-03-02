@@ -83,7 +83,7 @@ const NirmaanSection = () => {
               transition={{ duration: 0.5, delay: 0.15 }}
               className="text-muted-foreground font-body leading-relaxed text-base md:text-lg border-l-4 border-green-accent pl-5 mb-10"
             >
-              <strong>Nirmaan Organization</strong>, founded in 2005 by alumni of BITS Pilani, is a pioneering non-profit dedicated to transforming lives and building a more inclusive and sustainable future. Led by Founder and Global CEO Sri Mayur Patnala, Nirmaan has impacted over <strong>5 million lives</strong> across 26 states and union territories in India, marking 20 years of impactful service.
+              <strong>Nirmaan Organization</strong>, founded in 2005 by alumni of BITS Pilani, is a pioneering non-profit dedicated to transforming lives and building a more inclusive and sustainable future. Led by Founder and Global CEO Sri Mayur Patnala, Nirmaan has impacted over 5 million lives across 26 states and union territories in India, marking 20 years of impactful service.
               <br /><br />
               Through our transformative empowerment programs in Holistic Education, Economic Empowerment, Health &amp; Wellbeing, Environment &amp; Sustainability, Rural Development, Community Development, Disaster Relief &amp; Rehabilitation, we create equal opportunities for individuals, regardless of their background, to thrive with dignity, opportunity, and compassion.
             </motion.p>
