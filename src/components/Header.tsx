@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import bitsLogo from "@/assets/bits-logo.jpeg";
 
 const navItems = [
@@ -8,9 +9,21 @@ const navItems = [
   "Accolades", "Achievements", "Social Responsibility", "Sustainability", "IQAC"
 ];
 
+const navRoutes: Record<string, string> = {
+  "Sustainability": "/",
+  "Social Responsibility": "/social-responsibility",
+};
+
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const getActiveTab = () => {
+    if (location.pathname === "/social-responsibility") return "Social Responsibility";
+    return "Sustainability";
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -62,20 +75,26 @@ const Header = () => {
             className="absolute top-full right-6 mt-2 bg-card/95 backdrop-blur-xl rounded-xl shadow-2xl border border-border/50 p-3 min-w-[220px]"
           >
             {navItems.map((item, i) => (
-              <motion.a
+              <motion.button
                 key={item}
-                href="#"
                 initial={{ opacity: 0, x: 10 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: i * 0.04 }}
-                className={`block px-4 py-2.5 rounded-lg transition-all font-body text-sm ${
-                  item === "Sustainability"
+                onClick={() => {
+                  const route = navRoutes[item];
+                  if (route) {
+                    navigate(route);
+                    setMenuOpen(false);
+                  }
+                }}
+                className={`block w-full text-left px-4 py-2.5 rounded-lg transition-all font-body text-sm ${
+                  item === getActiveTab()
                     ? "text-primary bg-primary/5 font-semibold"
                     : "text-foreground hover:bg-muted hover:translate-x-1"
                 }`}
               >
                 {item}
-              </motion.a>
+              </motion.button>
             ))}
           </motion.div>
         )}

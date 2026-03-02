@@ -12,7 +12,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <HeroBanner />
-      <SubNav />
+      <SubNav activeTab="Sustainability" />
       <IntroSection />
       <GuidingPrinciples />
       <ArcsetSection />
