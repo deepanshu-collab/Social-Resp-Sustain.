@@ -67,6 +67,14 @@ export const campusContent: Record<
           "To reduce plastic consumption, students created biodegradable paper bags from newspapers for use in the campus Mini Mart and canteen.",
         ],
       },
+      {
+        heading: "Community & Greening Initiatives",
+        items: [
+          "Annual donation drives collect used clothes and beddings, which are donated to the Emirates Red Crescent for reuse and recycling, reducing greenhouse gas emissions from textile waste.",
+          "Energy and water conservation awareness messages are displayed across the campus to encourage sustainable living among the BITS fraternity.",
+          "A Tree Plantation Drive engages students and staff in creating a greener campus and spreading awareness about ecological responsibility.",
+        ],
+      },
     ],
   },
   goa: {
@@ -90,8 +98,23 @@ export const campusContent: Record<
           "A total of 150 trees were planted in collaboration with the Goa Forest Department to strengthen the campus's green cover and climate-resilient micro-ecosystem.",
         ],
       },
-    ],
-  },
+      {
+        heading: "Green Campus & Transportation",
+        items: [
+          "40 standalone solar-powered street lights are installed, saving approximately 2,600 kW of electricity annually. 85% of the 275 street lights operate on off-grid solar power, saving an estimated 41,000 kW annually.",
+          "5 groundwater recharge points capture monsoon surface runoff for natural percolation, with more recharge points planned across the campus.",
+          "Native and climate-resilient plantations with bird houses create a thriving micro-ecosystem supporting biodiversity and ecological balance.",
+          "Private vehicles are restricted on campus; 3,500+ students are encouraged to use walking corridors and public transport for commuting.",
+        ],
+      },
+      {
+        heading: "Student Environmental Initiatives (EPAC)",
+        items: [
+          "The Environment Protection and Awareness Club (EPAC) organizes annual beach and campus cleanup drives in association with Nirmaan.",
+          "Slithers, the annual snake awareness program, and Paw Pals, a visit to an animal shelter, promote wildlife awareness and compassion.",
+          "Sustainability events including Green Quiz and Best out of Waste competitions are held during Quark, the annual technical festival.",
+        ],
+      },
   hyderabad: {
     title: "BITS Pilani, Hyderabad Campus",
     intro:
