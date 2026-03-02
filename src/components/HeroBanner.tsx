@@ -1,30 +1,74 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import heroImage from "@/assets/hero-sustainability-new.jpg";
 
 const HeroBanner = () => {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const imgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.4, 0.8]);
+
   return (
-    <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
-      <img
+    <section ref={ref} className="relative h-[70vh] min-h-[480px] overflow-hidden">
+      <motion.img
+        style={{ y: imgY }}
         src={heroImage}
         alt="Sustainability - hand holding green ecosystem"
-        className="absolute inset-0 w-full h-full object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center scale-110"
+      />
+      <motion.div
+        style={{ opacity: overlayOpacity }}
+        className="absolute inset-0"
       />
       <div
         className="absolute inset-0"
         style={{
-          background: "linear-gradient(180deg, hsla(234,40%,25%,0.35) 0%, hsla(234,50%,15%,0.65) 100%)"
+          background: "linear-gradient(180deg, hsla(234,40%,25%,0.3) 0%, hsla(234,50%,15%,0.7) 100%)"
         }}
       />
-      <div className="relative z-10 flex items-end h-full px-6 md:px-12 pb-16">
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
+      <div className="relative z-10 flex flex-col justify-end h-full px-6 md:px-12 pb-20">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground font-medium tracking-wide"
+          transition={{ duration: 0.8, delay: 0.3 }}
         >
-          Sustainability
-        </motion.h2>
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="inline-block px-4 py-1.5 bg-green-accent/20 backdrop-blur-sm text-primary-foreground text-sm font-body font-medium rounded-full mb-4 border border-primary-foreground/20"
+          >
+            BITS Pilani Initiative
+          </motion.span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-primary-foreground font-medium tracking-wide">
+            Sustainability
+          </h2>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.7 }}
+            className="mt-4 text-primary-foreground/80 font-body text-lg md:text-xl max-w-2xl"
+          >
+            Building a greener future through innovation, research, and responsible stewardship.
+          </motion.p>
+        </motion.div>
       </div>
+
+      {/* Scroll indicator */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2 }}
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10"
+      >
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center pt-2"
+        >
+          <div className="w-1 h-2 bg-primary-foreground/60 rounded-full" />
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
