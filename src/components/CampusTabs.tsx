@@ -38,16 +38,6 @@ const galleryLabels: Record<CampusKey, string[]> = {
   hyderabad: ["Solar Hot Water Systems", "Solar Street Lights & Green Corridors", "Waste Management & Recycling Centre"],
 };
 
-const sectionIcons: Record<string, string> = {
-  "Energy Conservation": "⚡",
-  "Water & Waste Management": "💧",
-  "Energy Management & Awareness": "💡",
-  "Recycling & Circular Economy": "♻️",
-  "Energy Efficiency": "⚡",
-  "Water Conservation & Ecosystem Management": "🌿",
-  "Renewable Energy": "☀️",
-  "Water Conservation & Greening": "💧",
-};
 
 const CampusTabs = () => {
   const [active, setActive] = useState<CampusKey>("pilani");
@@ -200,8 +190,7 @@ const CampusTabs = () => {
                     transition={{ duration: 0.35, delay: 0.2 + sIdx * 0.1 }}
                     className="bg-lavender rounded-xl p-6 border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300"
                   >
-                    <h4 className="text-lg font-display text-foreground font-semibold mb-4 flex items-center gap-2">
-                      <span className="text-xl">{sectionIcons[section.heading] || "🔹"}</span>
+                    <h4 className="text-lg font-display text-foreground font-semibold mb-4">
                       {section.heading}
                     </h4>
                     <ul className="space-y-2.5">

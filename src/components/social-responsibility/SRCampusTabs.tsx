@@ -14,19 +14,6 @@ const campusImages: Record<SRCampusKey, string> = {
   hyderabad: campusHyderabadMain,
 };
 
-const sectionIcons: Record<string, string> = {
-  "Community Outreach & Education": "📚",
-  "Empowerment & Campus Cooperatives": "🤝",
-  "Charitable Health & Relief Initiatives": "🏥",
-  "Environmental Conservation & Awareness": "🌍",
-  "Operation Reuse & Sustainability": "♻️",
-  "Humanitarian Relief & Educational Outreach": "🎓",
-  "Innovation & Economic Empowerment": "💡",
-  "Health, Education & Community Welfare": "💛",
-  "Rural & Community Development": "🏘️",
-  "Health & Environment": "🌿",
-  "Social Philanthropy & Student Development": "📣",
-};
 
 const SRCampusTabs = () => {
   const [active, setActive] = useState<SRCampusKey>("pilani");
@@ -140,8 +127,7 @@ const SRCampusTabs = () => {
                     transition={{ duration: 0.35, delay: 0.2 + sIdx * 0.1 }}
                     className="bg-lavender rounded-xl p-6 border border-border hover:border-primary/20 hover:shadow-md transition-all duration-300"
                   >
-                    <h4 className="text-lg font-display text-foreground font-semibold mb-4 flex items-center gap-2">
-                      <span className="text-xl">{sectionIcons[section.heading] || "🔹"}</span>
+                    <h4 className="text-lg font-display text-foreground font-semibold mb-4">
                       {section.heading}
                     </h4>
                     <ul className="space-y-2.5">
