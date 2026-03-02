@@ -6,6 +6,7 @@ import GuidingPrinciples from "@/components/GuidingPrinciples";
 import ArcsetSection from "@/components/ArcsetSection";
 import CampusTabs from "@/components/CampusTabs";
 import FooterCTA from "@/components/FooterCTA";
+import SectionDivider from "@/components/SectionDivider";
 
 const Index = () => {
   return (
@@ -14,9 +15,13 @@ const Index = () => {
       <HeroBanner />
       <SubNav activeTab="Sustainability" />
       <IntroSection />
+      <SectionDivider />
       <GuidingPrinciples />
+      <SectionDivider />
       <ArcsetSection />
+      <SectionDivider />
       <CampusTabs />
+      <SectionDivider />
       <FooterCTA />
     </div>
   );

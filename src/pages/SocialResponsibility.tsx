@@ -5,6 +5,7 @@ import SRIntroSection from "@/components/social-responsibility/SRIntroSection";
 import NirmaanSection from "@/components/social-responsibility/NirmaanSection";
 import SRCampusTabs from "@/components/social-responsibility/SRCampusTabs";
 import FooterCTA from "@/components/FooterCTA";
+import SectionDivider from "@/components/SectionDivider";
 
 const SocialResponsibility = () => {
   return (
@@ -13,8 +14,11 @@ const SocialResponsibility = () => {
       <SRHeroBanner />
       <SubNav activeTab="Social Responsibility" />
       <SRIntroSection />
+      <SectionDivider />
       <NirmaanSection />
+      <SectionDivider />
       <SRCampusTabs />
+      <SectionDivider />
       <FooterCTA />
     </div>
   );
