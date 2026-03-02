@@ -3,6 +3,7 @@ import HeroBanner from "@/components/HeroBanner";
 import SubNav from "@/components/SubNav";
 import IntroSection from "@/components/IntroSection";
 import GuidingPrinciples from "@/components/GuidingPrinciples";
+import ArcsetSection from "@/components/ArcsetSection";
 import CampusTabs from "@/components/CampusTabs";
 import FooterCTA from "@/components/FooterCTA";
 
@@ -14,6 +15,7 @@ const Index = () => {
       <SubNav />
       <IntroSection />
       <GuidingPrinciples />
+      <ArcsetSection />
       <CampusTabs />
       <FooterCTA />
     </div>
