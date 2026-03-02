@@ -122,15 +122,15 @@ const CampusTabs = () => {
             className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
           >
             {/* Hero Image — fully visible, center-aligned */}
-            <div className="relative w-full bg-foreground/5">
+            <div className="relative w-full overflow-hidden">
               <motion.img
                 key={active + "-img"}
-                initial={{ scale: 1.03, opacity: 0 }}
+                initial={{ scale: 1.05, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.7, ease: "easeOut" }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-72 md:h-[420px] object-contain mx-auto"
+                className="w-full h-72 md:h-[420px] object-cover"
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
