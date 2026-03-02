@@ -1,4 +1,4 @@
-import heroImage from "@/assets/hero-sustainability.jpg";
+import heroImage from "@/assets/hero-sustainability-new.jpg";
 
 const HeroBanner = () => {
   return (

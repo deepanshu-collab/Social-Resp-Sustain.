@@ -38,12 +38,12 @@ const GuidingPrinciples = () => {
             <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold mb-6">
               Guiding Principles for a Sustainable Campus & Community
             </h3>
-            <div className="space-y-2">
+            <div className="bg-lavender rounded-xl p-4 space-y-1">
               {principles.map(({ label, icon: Icon }) => (
                 <a
                   key={label}
                   href="#"
-                  className="flex items-center gap-3 px-4 py-3 rounded-lg hover:bg-lavender transition-colors group"
+                  className="flex items-center gap-3 px-4 py-3 rounded-lg bg-card hover:bg-lavender-deep border border-border transition-colors group"
                 >
                   <Icon className="w-5 h-5 text-accent flex-shrink-0" />
                   <span className="font-body text-sm font-semibold text-accent group-hover:underline">
