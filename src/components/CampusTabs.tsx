@@ -131,7 +131,7 @@ const CampusTabs = () => {
                 transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-64 md:h-[400px] object-cover object-center"
+                className={`w-full h-64 md:h-[400px] ${active === "pilani" ? "object-contain" : "object-cover object-center"}`}
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
@@ -166,7 +166,7 @@ const CampusTabs = () => {
                     Campus Sustainability Infrastructure
                   </h4>
                   <div className={`grid gap-5 ${
-                    gallery.length === 1 ? "grid-cols-1 max-w-2xl mx-auto" :
+                    gallery.length === 1 ? "grid-cols-1" :
                     gallery.length === 3 ? "grid-cols-1 md:grid-cols-3" :
                     "grid-cols-1 md:grid-cols-2"
                   }`}>
