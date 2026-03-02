@@ -100,7 +100,6 @@ const CampusTabs = () => {
                   : "bg-card text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-md"
               }`}
             >
-              <MapPin className="w-4 h-4" />
               {label}
               {active === key && (
                 <motion.div
@@ -131,7 +130,7 @@ const CampusTabs = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-72 md:h-[420px] object-cover"
+                className={`w-full h-72 md:h-[420px] object-cover ${active === "pilani" ? "object-bottom" : ""}`}
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
