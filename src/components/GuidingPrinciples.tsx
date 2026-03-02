@@ -2,12 +2,17 @@ import { motion } from "framer-motion";
 import sdgImage from "@/assets/sdg-goals.webp";
 
 const principles = [
-  ["Climate Action Plan", "SDG Impact"],
-  ["Sustainable Investment Policy", "HESI Community Member"],
-  ["Sustainable Procurement Policy", "Race to Zero"],
-  ["Green Audit Report", "Student Club"],
-  ["Carbon Reduction Strategic Plan", "Sustainability Committee"],
-  ["Renewable Energy Club", ""],
+  "Climate Action Plan",
+  "SDG Impact",
+  "Sustainable Investment Policy",
+  "HESI Community Member",
+  "Sustainable Procurement Policy",
+  "Race to Zero",
+  "Green Audit Report",
+  "Student Club",
+  "Carbon Reduction Strategic Plan",
+  "Sustainability Committee",
+  "Renewable Energy Club",
 ];
 
 const GuidingPrinciples = () => {
@@ -41,28 +46,19 @@ const GuidingPrinciples = () => {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <h3 className="text-2xl md:text-3xl font-display text-primary font-semibold mb-8 text-center">
-              Guiding Principles for a Sustainable Campus & Community
+              Guiding Principles for a Sustainable Campus &amp; Community
             </h3>
-            <div className="space-y-4">
-              {principles.map(([left, right], idx) => (
-                <div key={idx} className="grid grid-cols-2 gap-4">
-                  <a
-                    href="#"
-                    className="block px-5 py-4 border-2 border-primary/20 rounded hover:border-primary hover:bg-lavender transition-colors group"
-                  >
-                    <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary">
-                      {left}
-                    </span>
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-5 py-4 border-2 border-primary/20 rounded hover:border-primary hover:bg-lavender transition-colors group"
-                  >
-                    <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary">
-                      {right}
-                    </span>
-                  </a>
-                </div>
+            <div className="grid grid-cols-2 gap-4">
+              {principles.map((label) => (
+                <a
+                  key={label}
+                  href="#"
+                  className="block px-5 py-4 border-2 border-primary/20 rounded hover:border-primary hover:bg-lavender transition-colors group"
+                >
+                  <span className="font-body text-sm font-semibold text-foreground group-hover:text-primary">
+                    {label}
+                  </span>
+                </a>
               ))}
             </div>
           </motion.div>
