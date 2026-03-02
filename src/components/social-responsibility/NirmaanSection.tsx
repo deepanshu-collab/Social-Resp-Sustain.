@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Users, School, Sparkles } from "lucide-react";
-import nirmaanImg1 from "@/assets/nirmaan-1.jpg";
+import nirmaanLogo from "@/assets/nirmaan-1.jpg";
 import nirmaanImg2 from "@/assets/nirmaan-2.jpg";
 
 const highlights = [
@@ -37,6 +37,11 @@ const NirmaanSection = () => {
             <Users className="w-4 h-4" />
             Student-Led Initiative
           </div>
+          <img
+            src={nirmaanLogo}
+            alt="Nirmaan.org logo"
+            className="h-16 md:h-20 mx-auto mb-4 object-contain"
+          />
           <h2 className="text-3xl md:text-4xl font-display text-foreground font-semibold mb-3">
             Nirmaan — Building Futures
           </h2>
@@ -55,32 +60,18 @@ const NirmaanSection = () => {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
         >
-          {/* Image Row */}
-          <div className="grid md:grid-cols-2">
-            <div className="overflow-hidden">
-              <motion.img
-                initial={{ scale: 1.05, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                src={nirmaanImg1}
-                alt="Nirmaan volunteers engaged in community outreach"
-                className="w-full h-64 md:h-80 object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="overflow-hidden">
-              <motion.img
-                initial={{ scale: 1.05, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-                src={nirmaanImg2}
-                alt="Nirmaan community programme with students"
-                className="w-full h-64 md:h-80 object-cover"
-                loading="lazy"
-              />
-            </div>
+          {/* Hero Image */}
+          <div className="overflow-hidden">
+            <motion.img
+              initial={{ scale: 1.05, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              src={nirmaanImg2}
+              alt="Nirmaan community programme with students"
+              className="w-full h-64 md:h-80 object-cover"
+              loading="lazy"
+            />
           </div>
 
           {/* Text Content */}
