@@ -7,11 +7,20 @@ import campusGoaMain from "@/assets/campus-goa-main.jpg";
 import campusHyderabadMain from "@/assets/campus-hyderabad-main.jpg";
 import campusPilaniExtra1 from "@/assets/campus-pilani-extra1.jpg";
 import campusPilaniExtra2 from "@/assets/campus-pilani-extra2.jpg";
+import campusPilaniExtra3 from "@/assets/campus-pilani-extra3.jpg";
+import campusPilaniExtra4 from "@/assets/campus-pilani-extra4.jpg";
+import campusPilaniExtra5 from "@/assets/campus-pilani-extra5.jpg";
 import campusDubaiExtra1 from "@/assets/campus-dubai-extra1.jpg";
 import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
 import campusDubaiExtra3 from "@/assets/campus-dubai-extra3.jpg";
+import campusDubaiExtra4 from "@/assets/campus-dubai-extra4.jpg";
+import campusDubaiExtra5 from "@/assets/campus-dubai-extra5.jpg";
+import campusDubaiExtra6 from "@/assets/campus-dubai-extra6.jpg";
 import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
 import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
+import campusGoaExtra3 from "@/assets/campus-goa-extra3.jpg";
+import campusGoaExtra4 from "@/assets/campus-goa-extra4.jpg";
+import campusGoaExtra5 from "@/assets/campus-goa-extra5.jpg";
 import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
 import campusHyderabadExtra2 from "@/assets/campus-hyderabad-extra2.jpg";
 import campusExtra2 from "@/assets/campus-extra-2.jpg";
@@ -25,16 +34,16 @@ const campusImages: Record<CampusKey, string> = {
 };
 
 const campusGallery: Record<CampusKey, string[]> = {
-  pilani: [campusPilaniExtra1],
-  dubai: [campusDubaiExtra1, campusDubaiExtra2, campusDubaiExtra3],
-  goa: [campusGoaExtra1, campusGoaExtra2],
+  pilani: [campusPilaniExtra1, campusPilaniExtra3, campusPilaniExtra4],
+  dubai: [campusDubaiExtra1, campusDubaiExtra4, campusDubaiExtra5],
+  goa: [campusGoaExtra1, campusGoaExtra3, campusGoaExtra5],
   hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
 };
 
 const galleryLabels: Record<CampusKey, string[]> = {
-  pilani: ["Rooftop Solar Power Plant Installation"],
-  dubai: ["LED Lighting Systems", "Book Reuse & Paper Conservation", "Waste Segregation & Recycling"],
-  goa: ["Solar Water Heaters & Green Campus", "Sewage Treatment Plant"],
+  pilani: ["Rooftop Solar Power Plant Installation", "Campus Solar Infrastructure", "Water Conservation Systems"],
+  dubai: ["LED Lighting Systems", "Sustainability Awareness Initiatives", "Community Donation & Reuse Programs"],
+  goa: ["Solar Water Heaters & Green Campus", "Energy Conservation Infrastructure", "Waste Management & Recycling"],
   hyderabad: ["Solar Hot Water Systems", "Solar Street Lights & Green Corridors", "Waste Management & Recycling Centre"],
 };
 
