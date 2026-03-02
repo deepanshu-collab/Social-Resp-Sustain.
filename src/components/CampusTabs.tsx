@@ -6,9 +6,15 @@ import campusDubaiMain from "@/assets/campus-dubai-main.jpg";
 import campusGoaMain from "@/assets/campus-goa-main.jpg";
 import campusHyderabadMain from "@/assets/campus-hyderabad-main.jpg";
 import campusPilaniExtra1 from "@/assets/campus-pilani-extra1.jpg";
+import campusPilaniExtra2 from "@/assets/campus-pilani-extra2.jpg";
 import campusDubaiExtra1 from "@/assets/campus-dubai-extra1.jpg";
+import campusDubaiExtra2 from "@/assets/campus-dubai-extra2.jpg";
 import campusGoaExtra1 from "@/assets/campus-goa-extra1.jpg";
+import campusGoaExtra2 from "@/assets/campus-goa-extra2.jpg";
 import campusHyderabadExtra1 from "@/assets/campus-hyderabad-extra1.jpg";
+import campusHyderabadExtra2 from "@/assets/campus-hyderabad-extra2.jpg";
+import campusExtra1 from "@/assets/campus-extra-1.jpg";
+import campusExtra2 from "@/assets/campus-extra-2.jpg";
 import { campuses, campusContent, type CampusKey } from "@/components/campus/campusData";
 
 const campusImages: Record<CampusKey, string> = {
@@ -18,11 +24,18 @@ const campusImages: Record<CampusKey, string> = {
   hyderabad: campusHyderabadMain,
 };
 
-const campusGallery: Record<CampusKey, { src: string; label: string }[]> = {
-  pilani: [{ src: campusPilaniExtra1, label: "Solar Power & Green Infrastructure" }],
-  dubai: [{ src: campusDubaiExtra1, label: "LED Energy Savings & Recycling Initiatives" }],
-  goa: [{ src: campusGoaExtra1, label: "Solar Street Lighting & Eco-friendly Practices" }],
-  hyderabad: [{ src: campusHyderabadExtra1, label: "Rooftop Solar & Green Campus Development" }],
+const campusGallery: Record<CampusKey, string[]> = {
+  pilani: [campusPilaniExtra1, campusPilaniExtra2, campusExtra1],
+  dubai: [campusDubaiExtra1, campusDubaiExtra2],
+  goa: [campusGoaExtra1, campusGoaExtra2],
+  hyderabad: [campusHyderabadExtra1, campusHyderabadExtra2, campusExtra2],
+};
+
+const galleryLabels: Record<CampusKey, string[]> = {
+  pilani: ["Solar Panel Installation", "Campus Green Infrastructure", "Sustainability Initiatives"],
+  dubai: ["LED Energy Systems", "Recycling & Conservation"],
+  goa: ["Solar Street Lighting", "Eco-friendly Campus"],
+  hyderabad: ["Rooftop Solar Systems", "Green Campus Development", "Herbal Garden & Biodiversity"],
 };
 
 const sectionIcons: Record<string, string> = {
@@ -43,6 +56,7 @@ const CampusTabs = () => {
   const [active, setActive] = useState<CampusKey>("pilani");
   const data = campusContent[active];
   const gallery = campusGallery[active];
+  const labels = galleryLabels[active];
 
   return (
     <motion.section
@@ -108,20 +122,19 @@ const CampusTabs = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
           >
-            {/* Hero Image — fills card, center-cropped */}
-            <div className="relative w-full overflow-hidden">
+            {/* Hero Image — fully visible, center-aligned */}
+            <div className="relative w-full bg-foreground/5">
               <motion.img
                 key={active + "-img"}
-                initial={{ scale: 1.05, opacity: 0 }}
+                initial={{ scale: 1.03, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-72 md:h-[440px] object-cover"
+                className="w-full h-72 md:h-[420px] object-contain mx-auto"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -151,24 +164,26 @@ const CampusTabs = () => {
                     <ChevronRight className="w-5 h-5 text-green-accent" />
                     Campus Sustainability Infrastructure
                   </h4>
-                  <div className="grid gap-4 grid-cols-1">
-                    {gallery.map((item, i) => (
+                  <div className={`grid gap-4 ${gallery.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2"}`}>
+                    {gallery.map((img, i) => (
                       <motion.div
                         key={i}
                         initial={{ opacity: 0, y: 12 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                        className="rounded-xl overflow-hidden border border-border shadow-lg group"
+                        className="rounded-xl overflow-hidden border border-border shadow-md group"
                       >
-                        <img
-                          src={item.src}
-                          alt={item.label}
-                          className="w-full h-56 md:h-72 object-cover group-hover:scale-[1.02] transition-transform duration-500"
-                          loading="lazy"
-                        />
-                        <div className="px-5 py-3 bg-lavender border-t border-border">
-                          <p className="text-sm font-body font-semibold text-foreground/80">
-                            {item.label}
+                        <div className="relative bg-foreground/5">
+                          <img
+                            src={img}
+                            alt={labels[i] || `${data.title} sustainability`}
+                            className="w-full h-48 md:h-56 object-contain mx-auto group-hover:scale-[1.02] transition-transform duration-500"
+                            loading="lazy"
+                          />
+                        </div>
+                        <div className="px-4 py-2.5 bg-lavender">
+                          <p className="text-sm font-body font-medium text-foreground/80">
+                            {labels[i] || "Sustainability Initiative"}
                           </p>
                         </div>
                       </motion.div>
