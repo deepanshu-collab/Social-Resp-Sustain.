@@ -16,7 +16,10 @@ const HeroBanner = () => {
         style={{ y: imgY }}
         src={heroImage}
         alt="Sustainability - hand holding green ecosystem"
-        className="absolute inset-0 w-full h-full object-cover object-center scale-110"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        initial={{ scale: 1.0 }}
+        animate={{ scale: [1.0, 1.08, 1.0] }}
+        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
       />
       <motion.div
         style={{ opacity: overlayOpacity }}
