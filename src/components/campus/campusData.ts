@@ -14,23 +14,20 @@ export const campusContent: Record<
   pilani: {
     title: "BITS Pilani, Pilani Campus",
     intro:
-      "BITS Pilani Pilani Campus is moving toward a zero-discharge model through large-scale solar adoption, LED and smart lighting, water recycling, recharge systems, and efficient fixtures, alongside cycling, public transport, and battery vehicles. Waste is segregated and processed into biogas and manure, supported by continuous sewage treatment, creating an integrated system for energy savings, water reuse, and sustainable resource management.",
+      "BITS Pilani Pilani Campus has significantly enhanced its green cover and biodiversity, with over 11,750 new plants, a dedicated Peacock Preservation Project, environmental education initiatives, and regular campus hygiene drives to maintain a safe, eco-friendly environment.",
     sections: [
       {
-        heading: "Energy Conservation",
+        heading: "Campus-Wide Plantation & Biodiversity",
         items: [
-          "The campus has installed 949.12 KWp of on-grid rooftop solar power plants.",
-          "It features numerous standalone and off-grid solar-powered street lights. All 495 street light fixtures on campus are LED and use Light Dependent Resistor (LDR) sensors to automatically turn on and off based on sunlight intensity.",
-          "The campus features solar-powered car parking stands capable of accommodating 56 four-wheelers.",
+          "Over the past decade, the campus has planted more than 11,750 new plants, significantly enhancing green cover and biodiversity. Ceremonial tree plantations are regularly organized during guest visits to reinforce the campus's green identity.",
+          "Initiated in 2017 and funded by the BITS Pilani 1997 Alumni batch, the Peacock Preservation Project developed a 4,602.26 sq. m. protected area, planted approximately 250 trees, and created a pond to revive the local peacock population and support native bird species.",
         ],
       },
       {
-        heading: "Water & Waste Management",
+        heading: "Environmental Education & Campus Hygiene",
         items: [
-          "The campus has created six groundwater recharge points to capture surface runoff during the monsoon season.",
-          "Water distribution is optimized using Variable Frequency Drive (VFD) based hydro-pneumatic systems and low-flow fixtures.",
-          "A 2 Ton per day organic waste processing plant treats wet waste to produce organic manure and biogas, which is stored and used to generate electric power.",
-          "Two Sewage Treatment Plants (1 MLD and 1.5 MLD) operate around the clock to treat domestic sewage. The treated effluent is reused for HVAC cooling tower makeup, toilet flushing, and landscape irrigation.",
+          "The Horticulture Department hosts an annual Interschool Gardening Competition for local BET schools to foster eco-awareness among the youth. The campus also promotes plant literacy by installing informational naming boards for various species in the South Park.",
+          "The institute conducts regular fogging and fumigation drives during the monsoon months in residential and hostel areas to control mosquito populations and maintain a safe, eco-friendly environment.",
         ],
       },
     ],

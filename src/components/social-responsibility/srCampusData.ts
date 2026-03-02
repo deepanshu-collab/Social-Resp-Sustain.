@@ -17,28 +17,34 @@ export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
   pilani: {
     title: "BITS Pilani, Pilani Campus",
     intro:
-      "BITS Pilani Pilani Campus has a rich tradition of social engagement, with multiple student organisations and faculty-led programmes dedicated to uplifting communities in and around Pilani through education, empowerment, health initiatives, and disaster relief.",
+      "BITS Pilani Pilani Campus is deeply committed to social responsibility through educational support, community health initiatives, youth empowerment, pandemic relief, and animal welfare programmes that create lasting impact on society.",
     sections: [
       {
-        heading: "Community Outreach & Education",
+        heading: "Educational Support & Scholarships",
         items: [
-          "Nirmaan: Initiated in February 2005 by BITSians, this student-led NGO is committed to a poverty-free, knowledge-powered, and economically empowered nation. It provides education and livelihood opportunities for underprivileged people.",
-          "NSS Pilani: Composed of enthusiastic volunteers and teachers, NSS focuses on comprehensive and sustainable models for community development, making students responsible citizens dedicated to improving the country.",
+          "The institute distributed over ₹23.31 crores in Ph.D. fellowships and M.E. stipends in FY 2024-25 to 1,069 research and postgraduate students.",
+          "Between 2016 and 2025, merit and need-based scholarships empowered over 19,000 students (2,031 girls and 17,539 boys).",
         ],
       },
       {
-        heading: "Empowerment & Campus Cooperatives",
+        heading: "Community Health & Wellness",
         items: [
-          "Pilani Innovation and Entrepreneurship Development Society (PIEDS): Its core agenda is to inspire, nurture, grow, and bring startups and social innovations to reality.",
-          "BITS Alumni Trust Initiative: Fosters community development in and around Pilani by providing an ecosystem for skill training, job creation, health, education, entrepreneurship, and women's rights.",
-          "Society for Student Mess Services (SSMS): A student-run body managing the financial and operational affairs of 7 messes and 1 all-night canteen, employing nearly 200 mess workers for over 3,500 students.",
+          "Regular free health check-up camps are organized for nearby villages and campus support staff, benefiting over 1,500 individuals with consultations and free medicines. Dedicated camps include a Dental Checkup Camp serving over 85 workers and a Cervical Cancer Awareness Programme hosted in collaboration with Max Hospital.",
+          "Between 2019 and 2025, campus blood donation drives collected 3,415 units of blood in partnership with local hospitals and NGOs. The campus also hosts annual Yoga Camps and wellness drives.",
         ],
       },
       {
-        heading: "Charitable Health & Relief Initiatives",
+        heading: "NSS Outreach & Youth Empowerment",
         items: [
-          "The campus actively organizes free medical check-up camps, blood donation drives, and Yoga wellness camps for nearby villages.",
-          "During the COVID-19 pandemic, the institute provided massive community relief, including free vaccination camps, isolation centers, dry ration distribution, and cash awards honoring frontline \"Corona Warriors.\"",
+          "The NSS has engaged more than 2,000 beneficiaries through literacy programs, rural computer literacy drives, and social awareness campaigns focusing on mental health, menstrual hygiene, and nutrition.",
+          "The Young Entrepreneurs Bootcamp (YEB) provides students from grades 9–12 across India with hands-on workshops in innovation, design thinking, and business planning, mentoring 314 school students between 2022 and 2025.",
+        ],
+      },
+      {
+        heading: "COVID-19 Relief & Animal Welfare",
+        items: [
+          "During the pandemic, the campus established isolation centres, facilitated free vaccination drives, donated 10 oxygen concentrators and 4 ventilators to local hospitals, distributed ~1,500 dry ration packets and ~2,500 cooked meals, and awarded ₹10,000 each to 75 frontline \"Corona Warriors\".",
+          "The Animal Welfare Committee runs an Animal Birth Control (ABC) and feeding program, providing daily food and medical care for approximately 225 campus dogs, and has successfully neutered, vaccinated, and microchipped 144 dogs.",
         ],
       },
     ],
