@@ -130,7 +130,7 @@ const CampusTabs = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 src={campusImages[active]}
                 alt={data.title}
-                className={`w-full h-72 md:h-[420px] object-cover ${active === "pilani" ? "object-bottom" : ""}`}
+                className={`w-full h-72 md:h-[420px] object-cover ${active === "pilani" ? "object-top" : ""}`}
                 loading="lazy"
               />
               <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
