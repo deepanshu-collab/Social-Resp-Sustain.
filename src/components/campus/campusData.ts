@@ -19,41 +19,18 @@ export const campusContent: Record<
       {
         heading: "Energy Conservation",
         items: [
-          "949.12 kWp of on-grid rooftop solar power plants installed and commissioned.",
-          "26 standalone solar-powered street lights saving ~990 kW annually.",
-          "80 of 495 street lights connected to off-grid solar plants (18.5 kW/day), saving ~6,753 kW annually.",
-          "All 495 campus street lights are LED type with LDR-based auto on/off control.",
-          "28 solar-powered car parking stands for 56 vehicles.",
-          "Newly renovated hostel toilets and exhaust fans controlled with motion sensors.",
+          "The campus has installed 949.12 KWp of on-grid rooftop solar power plants.",
+          "It features numerous standalone and off-grid solar-powered street lights. All 495 street light fixtures on campus are LED and use Light Dependent Resistor (LDR) sensors to automatically turn on and off based on sunlight intensity.",
+          "The campus features solar-powered car parking stands capable of accommodating 56 four-wheelers.",
         ],
       },
       {
-        heading: "Water Conservation",
+        heading: "Water & Waste Management",
         items: [
-          "Six groundwater recharge points across campus for monsoon runoff percolation.",
-          "All tanks equipped with floats, sensors, and actuator valves to prevent overflow.",
-          "Insulation on water storage tanks to guard against extreme temperatures.",
-          "VFD-based hydro pneumatic system and low-flow fixtures.",
-          "STP treated water (BOD < 10 ppm, COD < 50 ppm) used for HVAC cooling, flushing, and irrigation.",
-        ],
-      },
-      {
-        heading: "Irrigation",
-        items: [
-          "Irrigation water for landscape sourced from in-house STP meeting governing requirements.",
-          "Enables maintenance of lush green gardens across campus.",
-        ],
-      },
-      {
-        heading: "Recycling",
-        items: [
-          "Domestic waste segregated at source into dry and wet waste.",
-          "2-ton-per-day organic waste processing plant on campus.",
-          "Biogas from plant stored and used to generate electricity with a Biogas Generator.",
-          "Plant by-product is organic manure used as soil improver.",
-          "Two STPs (1 MLD & 1.5 MLD) operating round the clock.",
-          "STP-treated water supplied to flush tanks through dedicated network.",
-          "Sludge transferred to drying bed and used as manure.",
+          "The campus has created six groundwater recharge points to capture surface runoff during the monsoon season.",
+          "Water distribution is optimized using Variable Frequency Drive (VFD) based hydro-pneumatic systems and low-flow fixtures.",
+          "A 2 Ton per day organic waste processing plant treats wet waste to produce organic manure and biogas, which is stored and used to generate electric power.",
+          "Two Sewage Treatment Plants (1 MLD and 1.5 MLD) operate around the clock to treat domestic sewage. The treated effluent is reused for HVAC cooling tower makeup, toilet flushing, and landscape irrigation.",
         ],
       },
     ],
@@ -64,36 +41,20 @@ export const campusContent: Record<
       "BITS Pilani Dubai Campus is advancing sustainability through energy efficiency, recycling, resource conservation, and awareness initiatives. The campus promotes responsible consumption by running drives on food wastage, energy and water conservation, and Earth Day/Earth Hour participation, while significantly reducing electricity use through LED lighting that cuts carbon emissions. Recycling systems collect paper and materials for municipal processing, textbooks are reused through a book-sharing system, and usable exam papers are repurposed into pads. Donation drives for clothes, promotion of biodegradable paper bags, and student-led environmental activities further support waste reduction and community engagement, reflecting a holistic approach to lowering the campus's environmental footprint.",
     sections: [
       {
-        heading: "LED Energy Savings",
+        heading: "Energy Management & Awareness",
         items: [
-          "By replacing conventional bulbs with LED lighting systems, BPDC saved 129,121 W.",
-          "Carbon intensity of electricity production in UAE is 0.42 kg CO₂/kWh — saving 54.23 kg CO₂ per hour.",
+          "The campus replaced conventional bulbs with LED lighting systems, successfully saving 129,121 W and reducing CO₂ emissions by 54.23 kg every hour.",
+          "The campus actively campaigns against food wastage to lower its greenhouse gas emissions and carbon footprint.",
+          "The campus observes Earth Hour by turning off non-essential lights to raise environmental awareness and supports Earth Day by planting saplings.",
         ],
       },
       {
-        heading: "Food Wastage Awareness",
+        heading: "Recycling & Circular Economy",
         items: [
-          "Food wastage increases carbon footprint — wasted food in landfills produces methane more potent than CO₂.",
-          "About 6%-8% of human-caused greenhouse gas emissions could be reduced by stopping food waste.",
-          "Creating awareness is the first step towards bringing about change.",
-        ],
-      },
-      {
-        heading: "Recycling & Reuse",
-        items: [
-          "Designated bins for recyclable materials across campus interior and exterior buildings.",
-          "Recyclable materials collected and deposited in the Municipal recycling centre.",
-          "Annual donation drives for used clothes via Emirates Red Crescent.",
-          "The Book Room provides used textbooks to reduce paper consumption and fossil fuel impact.",
-          "Usable papers from exam booklets collected and made into scribbling pads for students and staff.",
-        ],
-      },
-      {
-        heading: "Awareness Initiatives",
-        items: [
-          "Annual Earth Day celebrations every April 22nd.",
-          "Energy and water conservation awareness messages displayed across campus.",
-          "Students created paper bags from newspapers as plastic-free alternatives for campus shops.",
+          "Designated recycling bins are located throughout the campus, and recyclable materials are processed at the Dubai Recycling Centre.",
+          "Through an initiative called \"The Book Room,\" students can borrow used textbooks rather than purchasing new ones to reduce the ecological impact of printed materials.",
+          "Usable paper from old exam booklets is repurposed into scribbling pads for students and staff.",
+          "To reduce plastic consumption, students created biodegradable paper bags from newspapers for use in the campus Mini Mart and canteen.",
         ],
       },
     ],
@@ -104,42 +65,19 @@ export const campusContent: Record<
       "BITS Pilani KK Birla Goa Campus is advancing sustainability through renewable energy adoption, water conservation, recycling, and eco-friendly campus practices. The campus promotes solar water heating, solar street lighting, LED retrofits, and planned on-grid solar expansion to reduce conventional power use, while groundwater recharge systems, automated tank controls, and reuse of treated sewage water support efficient water management. Private vehicles are restricted to limit emissions, and green mobility is encouraged through walking corridors and public transport. Waste is segregated and processed via biogas, composting, and recycling systems, with treated sludge and garden waste reused as manure. Student initiatives such as tree plantations, clean-up drives, wildlife awareness, and sustainability events further strengthen environmental responsibility and community participation across the campus.",
     sections: [
       {
-        heading: "Energy Conservation",
+        heading: "Energy Efficiency",
         items: [
-          "Over 60 solar water heaters, each with a capacity of 500 litres, are provided at all 20 hostels, which accommodate 3500+ students.",
-          "Approximately 40 standalone solar-powered streetlights are installed on the campus, estimated to save around 2,600 kW of electricity annually.",
-          "Approximately 85% of the campus's streetlights (275 total) are connected to an off-grid solar power plant producing 19 kW per day, saving around 41,000 kW annually.",
-          "Since 2016, hostels, residential quarters, and buildings have been equipped with LED fixtures to reduce energy consumption.",
-          "Existing CFL, tube lights and other fixtures are being replaced with energy-saving LED fixtures in a phased manner.",
-          "Plans to install on-grid solar power systems ranging from 50 to 100 kW to enhance renewable energy usage.",
+          "The campus has an installed solar power capacity of 1.45 MWp, generating approximately 20 lakh units of electricity annually and reducing CO₂ emissions by nearly 1,700 tons per year. Over 60 solar water heaters (500 liters each) provide hot water to all 20 student hostels.",
+          "Energy consumption has been minimized through the installation of thousands of LED lights, BLDC ceiling fans, limit switches, and occupancy sensors.",
+          "An Energy Management System (EMS) and a Building Management System (BMS) are used for real-time monitoring and to automate the air handling units based on classroom schedules.",
         ],
       },
       {
-        heading: "Water Conservation",
+        heading: "Water Conservation & Ecosystem Management",
         items: [
-          "Five groundwater recharge points across campus for monsoon surface runoff percolation.",
-          "All overhead tanks and water coolers equipped with floats, sensors, and shut-off mechanisms.",
-          "Pressurised water tanks fitted with actuated valves to prevent overflow.",
-        ],
-      },
-      {
-        heading: "Transportation",
-        items: [
-          "Transportation is very limited on campus. 3500+ students are not permitted to use private transport inside the campus.",
-          "Students are encouraged to use public transport for local movement outside the campus.",
-          "Students use covered corridors to walk from hostels to the academic block.",
-        ],
-      },
-      {
-        heading: "Recycling",
-        items: [
-          "Sewage Treatment Plant (600 cumecs capacity) operates 24/7 to treat sewage.",
-          "STP-treated water supplied to flush tanks and recycled for maintaining lush green gardens.",
-          "Sludge from STP transferred to drying bed and used as manure.",
-          "Domestic waste segregated at source into dry, wet, and medical waste streams.",
-          "Biogas plant and composter treat 1 ton of wet waste per day.",
-          "Dry waste segregated and handed to GSPCB-approved vendor for recycling.",
-          "All garden waste composted and converted into manure.",
+          "The campus utilizes water-saving aerators (yielding a 20–30% reduction in usage) and push-type self-closing taps in washbasins. A 600 cumec Sewage Treatment Plant treats domestic wastewater, and the resulting treated water is used for flushing networks and landscaping.",
+          "Wet waste is treated daily in a 1 TPD biogas plant and composter, converting it into garden manure. Dry waste is baled using a 5HP machine and handed over to authorized recyclers.",
+          "A total of 150 trees were planted in collaboration with the Goa Forest Department to strengthen the campus's green cover and climate-resilient micro-ecosystem.",
         ],
       },
     ],
@@ -150,39 +88,20 @@ export const campusContent: Record<
       "BITS Pilani Hyderabad Campus promotes sustainability through integrated initiatives in renewable energy, water conservation, waste management, and green campus development. The campus uses large-scale rooftop solar systems, solar street lights, solar hot water units, LED lighting, timers, and motion sensors to reduce electricity consumption, while rainwater harvesting pits, aerators, push taps, waterless urinals, and reuse of treated water for flushing and gardening support efficient water management. Waste is segregated into dry, wet, and e-waste, with wet waste converted into manure and food waste processed in a biodigester for future energy use. Tree plantation drives under the Haritha Haram scheme and a dedicated herbal garden further strengthen biodiversity and environmental awareness, reflecting a comprehensive approach toward a greener and resource-efficient campus.",
     sections: [
       {
-        heading: "Energy Conservation",
+        heading: "Renewable Energy",
         items: [
-          "Rooftop solar power installations across academic and hostel buildings.",
-          "LED lighting deployed campus-wide with automated controls for energy efficiency.",
-          "Smart building management systems to optimise HVAC and lighting energy use.",
-          "Energy audits conducted periodically to identify and act on conservation opportunities.",
+          "Rooftop solar power systems with a capacity of approximately 1.5 MW have been installed across academic and hostel blocks, generating nearly 1.75 lakh units of electricity per month. The campus utilizes 50 solar street lights and solar hot water systems in all hostels to reduce reliance on conventional electricity.",
+          "Power consumption is actively reduced via LED tube lights, automatic street light timers, and washroom motion sensors.",
         ],
       },
       {
-        heading: "Water Conservation",
+        heading: "Water Conservation & Greening",
         items: [
-          "Rainwater harvesting systems installed across the campus for groundwater recharge.",
-          "Sewage Treatment Plant (STP) for treating and recycling wastewater.",
-          "Low-flow fixtures and sensor-based taps in washrooms to minimise water wastage.",
-          "Treated water reused for landscaping and horticulture purposes.",
-        ],
-      },
-      {
-        heading: "Green Initiatives",
-        items: [
-          "Extensive tree plantation drives conducted annually with student participation.",
-          "Eco-friendly campus design with green corridors and biodiversity zones.",
-          "Awareness campaigns on sustainability integrated into student orientation programmes.",
-          "Student-led environmental clubs driving campus-wide green initiatives.",
-        ],
-      },
-      {
-        heading: "Waste Management",
-        items: [
-          "Segregation of waste at source into dry, wet, and e-waste categories.",
-          "Organic waste composting for use as campus manure.",
-          "Partnerships with certified recyclers for responsible disposal of e-waste and dry waste.",
-          "Reduction in single-use plastics through awareness and policy enforcement.",
+          "To improve groundwater levels, the campus relies on seven conventional recharge pits and three injection-type recharge pits.",
+          "Water usage is optimized through the installation of washbasin aerators (saving 25–30%), push-type taps, and around 50 waterless urinals.",
+          "Treated water is actively used for flushing in high-rise towers and irrigating campus gardens.",
+          "Food waste from campus messes is treated in a biodigester plant, while a dedicated yard segregates dry, wet, and e-waste.",
+          "Under the Haritha Haram scheme, roughly 200 trees are planted annually, and the Department of Pharmacy maintains a dedicated herbal garden.",
         ],
       },
     ],
