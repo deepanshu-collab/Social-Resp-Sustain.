@@ -17,8 +17,23 @@ export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
   pilani: {
     title: "BITS Pilani, Pilani Campus",
     intro:
-      "BITS Pilani Pilani Campus is deeply committed to social responsibility through educational support, community health initiatives, youth empowerment, pandemic relief, and animal welfare programmes that create lasting impact on society.",
+      "BITS Pilani Pilani Campus has a rich tradition of social engagement through student organisations, faculty-led programmes, educational support, community health initiatives, youth empowerment, pandemic relief, and animal welfare programmes that create lasting impact on society.",
     sections: [
+      {
+        heading: "Community Outreach & Education",
+        items: [
+          "Nirmaan: Initiated in February 2005 by BITSians, this student-led NGO is committed to a poverty-free, knowledge-powered, and economically empowered nation. It provides education and livelihood opportunities for underprivileged people.",
+          "NSS Pilani: Composed of enthusiastic volunteers and teachers, NSS focuses on comprehensive and sustainable models for community development, making students responsible citizens dedicated to improving the country.",
+        ],
+      },
+      {
+        heading: "Empowerment & Campus Cooperatives",
+        items: [
+          "Pilani Innovation and Entrepreneurship Development Society (PIEDS): Its core agenda is to inspire, nurture, grow, and bring startups and social innovations to reality.",
+          "BITS Alumni Trust Initiative: Fosters community development in and around Pilani by providing an ecosystem for skill training, job creation, health, education, entrepreneurship, and women's rights.",
+          "Society for Student Mess Services (SSMS): A student-run body managing the financial and operational affairs of 7 messes and 1 all-night canteen, employing nearly 200 mess workers for over 3,500 students.",
+        ],
+      },
       {
         heading: "Educational Support & Scholarships",
         items: [
