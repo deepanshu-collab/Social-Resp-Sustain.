@@ -122,23 +122,24 @@ const CampusTabs = () => {
             transition={{ duration: 0.4, ease: "easeOut" }}
             className="bg-card rounded-2xl overflow-hidden shadow-xl border border-border"
           >
-            {/* Hero Image — fully visible, center-aligned */}
-            <div className="relative w-full overflow-hidden">
+            {/* Hero Image */}
+            <div className="relative w-full overflow-hidden bg-foreground/5">
               <motion.img
                 key={active + "-img"}
-                initial={{ scale: 1.05, opacity: 0 }}
+                initial={{ scale: 1.08, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                transition={{ duration: 1, ease: [0.25, 0.1, 0.25, 1] }}
                 src={campusImages[active]}
                 alt={data.title}
-                className="w-full h-72 md:h-[420px] object-cover"
+                className="w-full h-64 md:h-[400px] object-cover object-center"
                 loading="lazy"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-foreground/70 via-foreground/30 to-transparent p-8 md:p-12">
+              <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
                 <motion.h3
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
+                  transition={{ duration: 0.4, delay: 0.3 }}
                   className="text-2xl md:text-3xl font-display text-white font-semibold drop-shadow-lg"
                 >
                   {data.title}
@@ -157,30 +158,34 @@ const CampusTabs = () => {
                 {data.intro}
               </motion.p>
 
-              {/* Gallery — Solar Panels, Infrastructure etc. */}
+              {/* Gallery */}
               {gallery.length > 0 && (
                 <div className="mb-10">
-                  <h4 className="text-lg font-display text-foreground font-semibold mb-4 flex items-center gap-2">
+                  <h4 className="text-lg font-display text-foreground font-semibold mb-5 flex items-center gap-2">
                     <ChevronRight className="w-5 h-5 text-green-accent" />
                     Campus Sustainability Infrastructure
                   </h4>
-                  <div className={`grid gap-4 ${gallery.length === 3 ? "grid-cols-1 md:grid-cols-3" : "grid-cols-1 md:grid-cols-2"}`}>
+                  <div className={`grid gap-5 ${
+                    gallery.length === 1 ? "grid-cols-1 max-w-2xl mx-auto" :
+                    gallery.length === 3 ? "grid-cols-1 md:grid-cols-3" :
+                    "grid-cols-1 md:grid-cols-2"
+                  }`}>
                     {gallery.map((img, i) => (
                       <motion.div
                         key={i}
-                        initial={{ opacity: 0, y: 12 }}
+                        initial={{ opacity: 0, y: 16 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.2 + i * 0.1 }}
-                        className="rounded-xl overflow-hidden border border-border shadow-md group"
+                        transition={{ duration: 0.5, delay: 0.2 + i * 0.12 }}
+                        className="rounded-xl overflow-hidden border border-border shadow-lg group hover:shadow-xl transition-shadow duration-500"
                       >
-                  <div className="relative overflow-hidden">
+                        <div className="relative overflow-hidden aspect-[4/3]">
                           <img
                             src={img}
                             alt={labels[i] || `${data.title} sustainability`}
-                            className="w-full h-52 md:h-64 object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                             loading="lazy"
                           />
-                          <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                          <div className="absolute inset-0 bg-gradient-to-t from-foreground/30 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                         </div>
                         <div className="px-4 py-3 bg-lavender border-t border-border">
                           <p className="text-sm font-body font-semibold text-foreground/80 flex items-center gap-2">
