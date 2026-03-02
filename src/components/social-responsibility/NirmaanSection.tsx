@@ -6,18 +6,18 @@ import nirmaanImg2 from "@/assets/nirmaan-2.jpg";
 const highlights = [
   {
     icon: Users,
-    title: "200+ Active Members",
-    desc: "Operating across all spheres of society, nurturing social leadership among youth.",
+    title: "5 Million+ Lives Impacted",
+    desc: "Transforming communities across 26 states and union territories in India over 20 years of service.",
   },
   {
     icon: School,
-    title: "School Adoption Program",
-    desc: "Reaching students in four villages — academics, personality development & environmental awareness.",
+    title: "7 Empowerment Programs",
+    desc: "Holistic Education, Economic Empowerment, Health & Wellbeing, Environment, Rural & Community Development, and Disaster Relief.",
   },
   {
     icon: Sparkles,
-    title: "Annual Ignite Festival",
-    desc: "300+ underprivileged and orphan children from across the city celebrate learning and joy.",
+    title: "20 Years of Impact",
+    desc: "Founded in 2005 by BITS Pilani alumni, pioneering inclusive and sustainable futures nationwide.",
   },
 ];
 
