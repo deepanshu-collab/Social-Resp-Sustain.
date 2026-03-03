@@ -33,7 +33,7 @@ const NirmaanChapters = () => {
       {/* Chapter Tabs */}
       <div className="flex justify-center gap-3 mb-8 flex-wrap">
         {chapterTabs.map(({ key, label }, index) => {
-          const Icon = campusIcons[key];
+          return (
           return (
             <motion.button
               key={key}
