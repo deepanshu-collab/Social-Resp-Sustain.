@@ -27,10 +27,6 @@ const NirmaanChapters = () => {
     >
       {/* Section Header */}
       <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-body font-medium mb-3">
-          <MapPin className="w-4 h-4" />
-          Campus Chapters
-        </div>
         <h3 className="text-2xl md:text-3xl font-display text-foreground font-semibold">
           Nirmaan Student Chapters
         </h3>
