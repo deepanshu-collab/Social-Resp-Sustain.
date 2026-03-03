@@ -146,24 +146,6 @@ const NirmaanSection = () => {
             {/* Nirmaan Chapters */}
             <NirmaanChapters />
 
-            {/* Link */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.4 }}
-              className="mt-8 text-center"
-            >
-              <a
-                href="https://nirmaan.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary font-body font-semibold hover:underline transition-colors"
-              >
-                Visit nirmaan.org
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </motion.div>
           </div>
         </motion.div>
       </div>
