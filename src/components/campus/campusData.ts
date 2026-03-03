@@ -55,6 +55,22 @@ export const campusContent: Record<
       "BITS Pilani Dubai Campus is advancing sustainability through energy efficiency, recycling, resource conservation, and awareness initiatives. The campus promotes responsible consumption by running drives on food wastage, energy and water conservation, and Earth Day/Earth Hour participation, while significantly reducing electricity use through LED lighting that cuts carbon emissions. Recycling systems collect paper and materials for municipal processing, textbooks are reused through a book-sharing system, and usable exam papers are repurposed into pads. Donation drives for clothes, promotion of biodegradable paper bags, and student-led environmental activities further support waste reduction and community engagement, reflecting a holistic approach to lowering the campus's environmental footprint.",
     sections: [
       {
+        heading: "Environmental Conservation & Awareness",
+        items: [
+          "Earth Day & Earth Hour: Actively celebrated by planting saplings, organizing online awareness events, and turning off non-essential campus lights to support global environmental movements.",
+          "Awareness Drives: Posters across the campus and dining halls encourage energy and water conservation while highlighting the environmental impact of food wastage.",
+        ],
+      },
+      {
+        heading: "Operation Reuse & Sustainability",
+        items: [
+          "Paper Bags: Students hand-made biodegradable bags from newspapers and donated them to the campus Mini Mart and Canteen to combat plastic use.",
+          "Cloth Donation: The Social and Environment Club annually collects clothes and bedding for donation to the Emirates Red Crescent.",
+          "The Book Room: Used textbooks are made available for students to borrow, reducing the ecological footprint of printed books.",
+          "Recycled Pads: Usable papers from old exam booklets are repurposed into scribbling pads for students and faculty.",
+        ],
+      },
+      {
         heading: "Energy Management & Awareness",
         items: [
           "The campus replaced conventional bulbs with LED lighting systems, successfully saving 129,121 W and reducing CO₂ emissions by 54.23 kg every hour.",

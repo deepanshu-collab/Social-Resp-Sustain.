@@ -70,22 +70,6 @@ export const srCampusContent: Record<SRCampusKey, SRCampusContent> = {
       "BITS Pilani Dubai Campus nurtures a culture of giving back through student organisations, community service programmes, and collaborations that extend the institution's impact beyond the classroom.",
     sections: [
       {
-        heading: "Environmental Conservation & Awareness",
-        items: [
-          "Earth Day & Earth Hour: Actively celebrated by planting saplings, organizing online awareness events, and turning off non-essential campus lights to support global environmental movements.",
-          "Awareness Drives: Posters across the campus and dining halls encourage energy and water conservation while highlighting the environmental impact of food wastage.",
-        ],
-      },
-      {
-        heading: "Operation Reuse & Sustainability",
-        items: [
-          "Paper Bags: Students hand-made biodegradable bags from newspapers and donated them to the campus Mini Mart and Canteen to combat plastic use.",
-          "Cloth Donation: The Social and Environment Club annually collects clothes and bedding for donation to the Emirates Red Crescent.",
-          "The Book Room: Used textbooks are made available for students to borrow, reducing the ecological footprint of printed books.",
-          "Recycled Pads: Usable papers from old exam booklets are repurposed into scribbling pads for students and faculty.",
-        ],
-      },
-      {
         heading: "Humanitarian Relief & Educational Outreach",
         items: [
           "Students actively engage in relief efforts, such as gathering essential materials for earthquake-affected families in Afghanistan. Health initiatives include campus-wide blood donation camps and Flu Vaccination Drives.",
