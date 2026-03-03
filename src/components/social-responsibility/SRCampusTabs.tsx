@@ -13,12 +13,6 @@ const campusImages: Record<SRCampusKey, string> = {
   goa: campusGoaMain,
   hyderabad: campusHyderabadMain,
 };
-const campusAccent: Record<SRCampusKey, string> = {
-  pilani: "border-l-amber-500",
-  dubai: "border-l-sky-500",
-  goa: "border-l-emerald-500",
-  hyderabad: "border-l-violet-500",
-};
 
 
 const SRCampusTabs = () => {
@@ -61,10 +55,10 @@ const SRCampusTabs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.08 }}
               onClick={() => setActive(key)}
-              className={`relative px-6 py-3 rounded-xl font-body text-sm font-semibold transition-all duration-300 flex items-center gap-2 border-l-[3px] ${
+              className={`relative px-6 py-3 rounded-xl font-body text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
                 active === key
-                  ? `bg-primary text-primary-foreground shadow-xl shadow-primary/20 scale-105 ${campusAccent[key]}`
-                  : `bg-card text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-md ${campusAccent[key]}`
+                  ? "bg-primary text-primary-foreground shadow-xl shadow-primary/20 scale-105"
+                  : "bg-card text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-md"
               }`}
             >
               {label}
