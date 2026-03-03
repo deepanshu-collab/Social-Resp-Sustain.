@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Users, School, Sparkles } from "lucide-react";
 import nirmaanLogo from "@/assets/nirmaan-1.jpg";
 import nirmaanImg2 from "@/assets/nirmaan-2.jpg";
+import NirmaanChapters from "./NirmaanChapters";
 
 const highlights = [
   {
@@ -141,6 +142,9 @@ const NirmaanSection = () => {
                 ))}
               </ul>
             </motion.div>
+
+            {/* Nirmaan Chapters */}
+            <NirmaanChapters />
 
             {/* Link */}
             <motion.div
