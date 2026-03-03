@@ -47,7 +47,6 @@ const NirmaanChapters = () => {
               }`}
             >
               {label}
-              {label}
               {active === key && (
                 <motion.div
                   layoutId="chapterActiveIndicator"
@@ -55,8 +54,7 @@ const NirmaanChapters = () => {
                 />
               )}
             </motion.button>
-          );
-        })}
+          ))}
       </div>
 
       {/* Chapter Content */}
