@@ -32,9 +32,7 @@ const NirmaanChapters = () => {
 
       {/* Chapter Tabs */}
       <div className="flex justify-center gap-3 mb-8 flex-wrap">
-        {chapterTabs.map(({ key, label }, index) => {
-          return (
-          return (
+        {chapterTabs.map(({ key, label }, index) => (
             <motion.button
               key={key}
               initial={{ opacity: 0, y: 8 }}
@@ -48,7 +46,7 @@ const NirmaanChapters = () => {
                   : "bg-lavender text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-sm"
               }`}
             >
-              <Icon className="w-4 h-4" />
+              {label}
               {label}
               {active === key && (
                 <motion.div
