@@ -7,11 +7,6 @@ import {
   type ChapterKey,
 } from "./nirmaanChaptersData";
 
-const campusIcons: Record<ChapterKey, typeof MapPin> = {
-  pilani: GraduationCap,
-  goa: BookOpen,
-  hyderabad: MapPin,
-};
 
 const NirmaanChapters = () => {
   const [active, setActive] = useState<ChapterKey>("pilani");
