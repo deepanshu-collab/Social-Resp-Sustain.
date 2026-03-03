@@ -84,8 +84,8 @@ const NirmaanChapters = () => {
             transition={{ duration: 0.4, delay: 0.1 }}
             className="mb-6"
           >
-            <h4 className="text-lg font-display text-foreground font-semibold mb-2">
-              {data.label}
+            <h4 className="text-lg font-display text-foreground font-semibold mb-2 flex items-center gap-2">
+              <span className="text-xl">📍</span> {data.label}
             </h4>
             <p className="text-sm font-body text-muted-foreground leading-relaxed border-l-3 border-green-accent pl-4">
               {data.intro}
