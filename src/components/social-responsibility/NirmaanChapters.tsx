@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, BookOpen, GraduationCap } from "lucide-react";
 import {
   chapterTabs,
   chapterContent,
