@@ -5,6 +5,11 @@ import {
   chapterContent,
   type ChapterKey,
 } from "./nirmaanChaptersData";
+const chapterAccent: Record<ChapterKey, string> = {
+  pilani: "border-l-amber-500",
+  goa: "border-l-emerald-500",
+  hyderabad: "border-l-violet-500",
+};
 
 
 const NirmaanChapters = () => {
@@ -40,10 +45,10 @@ const NirmaanChapters = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.35, delay: index * 0.08 }}
               onClick={() => setActive(key)}
-              className={`relative px-5 py-2.5 rounded-xl font-body text-sm font-semibold transition-all duration-300 flex items-center gap-2 ${
+              className={`relative px-5 py-2.5 rounded-xl font-body text-sm font-semibold transition-all duration-300 flex items-center gap-2 border-l-[3px] ${
                 active === key
-                  ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105"
-                  : "bg-lavender text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-sm"
+                  ? `bg-primary text-primary-foreground shadow-lg shadow-primary/20 scale-105 ${chapterAccent[key]}`
+                  : `bg-lavender text-muted-foreground hover:bg-lavender-deep hover:text-foreground border border-border hover:border-primary/30 hover:shadow-sm ${chapterAccent[key]}`
               }`}
             >
               {label}
